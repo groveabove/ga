@@ -1,10 +1,14 @@
 body {
   background-color: grey;
+  text-color: white;
+  font-size: 75px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.container {
-  ...
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 400px;
+  border: 0px;
 }

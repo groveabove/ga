@@ -1,7 +1,6 @@
 body {
   background-color: #66cccc;
   color: white;
-  font-size: 50px;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -13,6 +12,5 @@ body {
 }
 
 .title {
-  align: center;
-  font-size: 50px;
+  font-size: 24px;
 }

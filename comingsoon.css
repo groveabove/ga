@@ -11,3 +11,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.title {
+  align: center;
+  font-size: 50px;
+}

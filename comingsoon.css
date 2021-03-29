@@ -11,6 +11,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#big {
+  font: bold 25px;  
+}
+
 #rcorners1 {
   border-radius: 25px;
   background: #ffffff;

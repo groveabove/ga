@@ -23,5 +23,5 @@ h1 {
   padding: 20px; 
   width: 200px;
   height: 15px; 
-  display: inline; 
+  display: inline-block; 
 }

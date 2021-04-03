@@ -1,0 +1,12 @@
+body {
+  background-color: #cccc99;
+  color: #333366;
+  font-family: "Garamond", serif;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0px;
+}

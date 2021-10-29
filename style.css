@@ -1,0 +1,59 @@
+html, body {
+  
+} 
+body {
+  background-color: #f2f2f2;
+  color: #333366;
+  font-family: "Garamond", serif;
+}
+
+.container {
+  height: 95vh;
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainlogo {
+  width:500px;
+}
+
+
+.haley {
+  text-align: end;
+  width: 500px;
+  font-size: 2rem;
+}
+button{
+  background-color: white;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  border: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  height: 50px;
+ 
+}
+.insta {
+  width: 40px;
+  height: 40px;
+
+
+}
+
+footer {
+
+  /* display: flex;
+  justify-content: flex-end;  */
+}
+
+@media screen and (max-width: 600px) {
+  .mainlogo, .haley {
+    width:90vw;
+    font-size: 1rem;
+    align-self: center;
+  }
+}

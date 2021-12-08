@@ -12,9 +12,12 @@ body {
   align-items: center;
   flex-direction: column;
 }
+#mc_embed_signup {
+  margin-left: 40px;
+}
 .required-email {
   width: 350px;
-  margin-left: 17px;
+  font-size: medium;
   border: none;
   border-bottom: 1px solid black;
   background-color: #f2f2f2;
@@ -23,6 +26,7 @@ body {
 }
 .button {
   border: 1px solid black;
+  border-radius: 5px;
   cursor: pointer;
 }
 .mainlogo {
@@ -51,6 +55,7 @@ button {
   height: 40px;
   opacity: 0.2;
 }
+
 #mc_embed_signup {
   clear: left;
   font: 14px Helvetica, Arial, sans-serif;
@@ -73,6 +78,11 @@ footer {
     align-self: center;
   }
   .required-email {
-    width: 50vw;
+    width: 40vw;
+  }
+  .button,
+  .required-email {
+    height: 40px;
+    font-size: large;
   }
 }

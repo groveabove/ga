@@ -1,6 +1,3 @@
-html, body {
-  
-} 
 body {
   background-color: #f2f2f2;
   color: #333366;
@@ -8,25 +5,38 @@ body {
 }
 
 .container {
-  height: 95vh;
+  height: 90vh;
   /* width: 100vw; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-.mainlogo {
-  width:500px;
+.required-email {
+  width: 350px;
+  margin-left: 17px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #f2f2f2;
+  color: #333366;
+  font-family: "Garamond", serif;
 }
-
-
+.button {
+  border: 1px solid black;
+  cursor: pointer;
+}
+.mainlogo {
+  width: 500px;
+}
+.mc-field-group {
+  padding-top: 30px;
+}
 .haley {
   text-align: end;
   width: 500px;
   font-size: 1.5em;
 }
-button{
+button {
   background-color: white;
   position: absolute;
   bottom: 5px;
@@ -35,24 +45,34 @@ button{
   padding: 5px;
   border-radius: 10px;
   height: 50px;
- 
 }
 .insta {
   width: 40px;
   height: 40px;
-  opacity: .2;
+  opacity: 0.2;
 }
-
+#mc_embed_signup {
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 500px;
+}
 footer {
-
   /* display: flex;
   justify-content: flex-end;  */
 }
 
 @media screen and (max-width: 600px) {
-  .mainlogo, .haley {
-    width:90vw;
+  .mainlogo,
+  .haley,
+  #mc_embed_signup {
+    width: 90vw;
     font-size: 1.2rem;
     align-self: center;
+  }
+  .required-email {
+    width: 50vw;
   }
 }

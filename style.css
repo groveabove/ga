@@ -12,6 +12,17 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+.mainlogo {
+  width: 500px;
+}
+
+.haley {
+  text-align: end;
+  width: 500px;
+  font-size: 1.5em;
+}
+
 .required-email {
   width: 60%;
   border: none;
@@ -20,6 +31,7 @@ body {
   color: #333366;
   font-family: "Garamond", serif;
 }
+
 .button {
   border: 1px solid #333366;
   cursor: pointer;
@@ -27,17 +39,18 @@ body {
   color: #333366;
   width: 30%
 }
-.mainlogo {
-  width: 500px;
-}
+
 .mc-field-group {
   padding-top: 30px;
 }
-.haley {
-  text-align: end;
+
+#mc_embed_signup {
+  font: 14px Garamond, serif;
   width: 500px;
-  font-size: 1.5em;
+  flex-wrap: nowrap;
+  text-align: center;
 }
+
 button {
   background-color: white;
   position: absolute;
@@ -48,15 +61,13 @@ button {
   border-radius: 10px;
   height: 50px;
 }
+
 .insta {
   width: 40px;
   height: 40px;
   opacity: 0.2;
 }
-#mc_embed_signup {
-  font: 14px Garamond, serif;
-  width: 500px;
-}
+
 footer {
   /* display: flex;
   justify-content: flex-end;  */

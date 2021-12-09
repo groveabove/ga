@@ -25,6 +25,7 @@ body {
   border: 1px solid #333366;
   cursor: pointer;
   font-family: "Garamond", serif;
+  color: #333366;
 }
 .mainlogo {
   width: 500px;

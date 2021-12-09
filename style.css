@@ -63,8 +63,8 @@ footer {
 
 @media screen and (max-width: 600px) {
   .mainlogo,
-  .haley,
-  #mc_embed_signup {
+  .haley{
+    width: 90vw;
     font-size: 1.2rem;
     align-self: center;
   }

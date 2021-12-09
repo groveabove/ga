@@ -51,7 +51,7 @@ body {
   display: flex;
   text-align: left;
   position: fixed;
-  bottom: 0px;
+  bottom: 5px;
   left: 10px;
 }
 

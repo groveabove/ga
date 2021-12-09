@@ -16,14 +16,15 @@ body {
   width: 350px;
   margin-left: 17px;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #333366;
   background-color: #f2f2f2;
   color: #333366;
   font-family: "Garamond", serif;
 }
 .button {
-  border: 1px solid black;
+  border: 1px solid #333366;
   cursor: pointer;
+  font-family: "Garamond", serif;
 }
 .mainlogo {
   width: 500px;
@@ -45,7 +46,6 @@ button {
   padding: 5px;
   border-radius: 10px;
   height: 50px;
-  font-family: "Garamond", serif;
 }
 .insta {
   width: 40px;

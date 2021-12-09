@@ -65,11 +65,7 @@ footer {
   .mainlogo,
   .haley,
   #mc_embed_signup {
-    width: 90vw;
     font-size: 1.2rem;
     align-self: center;
-  }
-  .required-email {
-    width: 50vw;
   }
 }

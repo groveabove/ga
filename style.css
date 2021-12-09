@@ -13,7 +13,7 @@ body {
   flex-direction: column;
 }
 .required-email {
-  width: 300px;
+  width: 60%;
   border: none;
   border-bottom: 1px solid #333366;
   background-color: #f2f2f2;
@@ -25,6 +25,7 @@ body {
   cursor: pointer;
   font-family: "Garamond", serif;
   color: #333366;
+  width: 30%
 }
 .mainlogo {
   width: 500px;
@@ -53,8 +54,8 @@ button {
   opacity: 0.2;
 }
 #mc_embed_signup {
-  clear: left;
   font: 14px Garamond, serif;
+  width: 500px;
 }
 footer {
   /* display: flex;

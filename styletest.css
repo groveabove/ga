@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+body#no-background {
+  background-image: none;
+}
+
 #sidenav a {
   position: fixed;
   right: -100px;
@@ -85,6 +89,7 @@ body {
 
 .mainlogo {
   width: 30%;
+  filter: drop-shadow(.05rem .05rem .1rem white)
 }
 
 .haley {
@@ -145,15 +150,20 @@ button {
   background-color: #cccccc;
   background-image: url("/mainbg1080.jpg");
   background-position: top center;
-  background-size: auto contain;
   transition: all 0.5s ease;
   }
   }
 
 @media screen and (max-width: 800px) {
+  body{
+    background-position: top center;
+    background-size: 80vh;
+    transition: all 0.5s ease;
+  }
   .mainlogo, .haley {
     width: 60%;
-    font-size: 1.2rem;}
+    font-size: 1.2rem;
+    transition: all 0.5s ease;}
   #sidenav a {
       position: fixed;
       right: 0px;
@@ -162,6 +172,14 @@ button {
       text-decoration: none;
       color: #333366;
       border-radius: 5px 0 0 0;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    body{
+      background-position: top center;
+      background-size: 100vw;
+      transition: all 0.5s ease;
     }
   }
   

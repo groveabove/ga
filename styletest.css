@@ -33,24 +33,24 @@ body#no-background {
   right: 0;
 }
 
-#home {
+/* #home {
   top: 5px;
   background-color: #ffcc00;
   padding: 0 14px 2px 6px !important;
-}
+} */
 
 #about {
-  top: 30px;
+  top: 5px;
   background-color: #ffcc00;
 }
 
 #contact {
-  top: 55px;
+  top: 30px;
   background-color: #ffcc00;
 }
 
 #projects {
-  top: 80px;
+  top: 55px;
   background-color: #ffcc00;
 }
 

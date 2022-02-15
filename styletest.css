@@ -3,14 +3,14 @@ html {
 }
 body {
   background-color: #cccccc;
-  background-image: url("/mainbg1080_180rotate.jpg"), url("/mainbg1080.jpg");
+  background-image: url("/mainbg1080.jpg"), url("/mainbg1080_180rotate.jpg");
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
-  background-position: left top, right top;
-  background-size: contain, contain;
+  background-position: right top, left bottom;
+  background-size: auto 850px, auto 850px;
   color: #333366;
   font-family: "Garamond", serif;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
 }
 

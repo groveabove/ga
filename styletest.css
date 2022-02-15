@@ -3,7 +3,7 @@ html {
 }
 body {
   background-color: #cccccc;
-  background-image: url("/mainbg1080_180rotate.png"), url("/mainbg1080.png");
+  background-image: url("/mainbg1080_180rotate.jpg"), url("/mainbg1080.jpg");
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   background-position: left top, right top;
@@ -29,7 +29,7 @@ body {
 
 .haley {
   text-align: end;
-  width: 500px;
+  width: 30%;
   font-size: 1.5em;
 }
 

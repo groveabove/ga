@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: #cccccc;
+  background-image: url("https://media.istockphoto.com/photos/cat-picture-id115805288"), url("https://media.istockphoto.com/photos/cat-picture-id115805288");
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position: left top, right top;
+  background-size: contain, contain;
+  color: #333366;
+  font-family: "Garamond", serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  height: 97vh;
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainlogo {
+  width: 500px;
+}
+
+.haley {
+  text-align: end;
+  width: 500px;
+  font-size: 1.5em;
+}
+
+.required-email {
+  width: 30vw;
+  border: none;
+  border-bottom: 1px solid #333366;
+  background-color: #f2f2f2;
+  color: #333366;
+  font-family: "Garamond", serif;
+}
+
+.submit-button {
+  border: 1px solid #333366;
+  cursor: pointer;
+  font-family: "Garamond", serif;
+  color: #333366;
+  width: 125px;
+}
+
+#mc_embed_signup {
+  font: 14px Garamond, serif;
+  /* width: 40vw; */
+  display: flex;
+  text-align: left;
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+}
+
+button {
+  background-color: white;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  border: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.insta {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .mainlogo,
+  .haley {
+    width: 90vw;
+    font-size: 1.2rem;
+    /* align-self: center; */
+  }
+  #mc_embed_signup {
+    width: 50vw;
+  }
+  .required-email,
+  .submit-button {
+    /* height:50px */
+    width: 300px;
+    margin-top: 3px;
+  }
+  .submit-button {
+    width: 150px;
+  }
+}

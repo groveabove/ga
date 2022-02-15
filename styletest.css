@@ -178,7 +178,7 @@ button {
   @media screen and (max-width: 500px) {
     body{
       background-position: top center;
-      background-size: 100vw;
+      background-size: auto 850px;
       transition: all 0.5s ease;
     }
   }

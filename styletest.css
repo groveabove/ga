@@ -98,6 +98,12 @@ body#no-background {
   font-size: 1.5em;
 }
 
+#construction {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
 /* 
   .required-email { 
   width: 30vw;

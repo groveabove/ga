@@ -44,8 +44,9 @@ body {
 }
 
 .container {
-  height: 97vh;
-  /* width: 100vw;  */
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,24 +89,26 @@ body {
   bottom: 5px;
   left: 10px;
 }
+*/
 
 button {
-  background-color: white;
+  background-color: grey;
   position: fixed;
   bottom: 5px;
   right: 5px;
   border: 0px;
   padding: 5px;
   border-radius: 10px;
-  height: 50px;
+  height: 40px;
+  opacity: .75;
 }
 
 .insta {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   opacity: 1;
 }
-*/
+
 
 @media screen and (max-width: 600px) {
   .mainlogo,

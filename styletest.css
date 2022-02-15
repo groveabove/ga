@@ -3,7 +3,7 @@ html {
 }
 body {
   background-color: #cccccc;
-  background-image: url("https://media.istockphoto.com/photos/cat-picture-id115805288"), url("https://media.istockphoto.com/photos/cat-picture-id115805288");
+  background-image: url("/mainbg1080_180rotate.png"), url("/mainbg1080.png");
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   background-position: left top, right top;

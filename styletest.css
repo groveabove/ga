@@ -95,7 +95,7 @@ body#no-background {
 
 .mainlogo {
   width: 30%;
-  filter: drop-shadow(.05rem .05rem .1rem white)
+  filter: drop-shadow(0.05rem 0.05rem 0.1rem white);
 }
 
 .haley {
@@ -147,7 +147,7 @@ button {
   padding: 5px;
   border-radius: 10px;
   height: 40px;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .insta {
@@ -156,46 +156,47 @@ button {
   opacity: 1;
 }
 
-
 @media screen and (max-width: 1250px) {
   body {
-  background-color: #cccccc;
-  background-image: url("/mainbg1080.jpg");
-  background-position: top center;
-  transition: all 0.5s ease;
+    background-color: #cccccc;
+    background-image: url("/mainbg1080.jpg");
+    background-position: top center;
+    transition: all 0.5s ease;
   }
-  }
+}
 
 @media screen and ((max-width: 800px) or (pointer:coarse)) {
-  body{
+  body {
     background-position: top center;
     background-size: 100vw;
     transition: all 0.5s ease;
   }
-  .mainlogo, .haley {
+  .mainlogo,
+  .haley {
     width: 60%;
     font-size: 1.2rem;
-    transition: all 0.5s ease;}
+    transition: all 0.5s ease;
+  }
   #sidenav a {
-      position: fixed;
-      right: 0px;
-      padding: 0 0 2px 10px;
-      width: 70px;
-      text-decoration: none;
-      color: #333366;
-      border-radius: 5px 0 0 0;
-    }
+    position: fixed;
+    right: 0px;
+    padding: 0 0 2px 10px;
+    width: 70px;
+    text-decoration: none;
+    color: #333366;
+    border-radius: 5px 0 0 0;
   }
+}
 
-  @media screen and (max-width: 500px) {
-    body{
-      background-position: top center;
-      background-size: auto 850px;
-      transition: all 0.5s ease;
-    }
+@media screen and (max-width: 500px) {
+  body {
+    background-position: top center;
+    background-size: auto 850px;
+    transition: all 0.5s ease;
   }
-  
-  /* #mc_embed_signup {
+}
+
+/* #mc_embed_signup {
     width: 50vw;
   }
   .required-email,
@@ -207,4 +208,3 @@ button {
     width: 150px;
   }
   */
-}

@@ -165,7 +165,7 @@ button {
   }
 }
 
-@media screen and ((max-width: 800px) or (pointer:coarse)) {
+@media screen and (max-width: 800px), (any-hover: none) {
   body {
     background-position: top center;
     background-size: 100vw;

@@ -169,7 +169,7 @@ button {
 @media screen and ((max-width: 800px) or (pointer:coarse)) {
   body{
     background-position: top center;
-    background-size: 100vh;
+    background-size: 100vw;
     transition: all 0.5s ease;
   }
   .mainlogo, .haley {

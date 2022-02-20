@@ -1,6 +1,9 @@
 html {
   height: 100%;
 }
+
+/*verious backgrounds*/
+/*home bg*/
 body {
   background-color: #cccccc;
   background-image: url("/mainbg1080.jpg"), url("/mainbg1080_180rotate.jpg");
@@ -17,6 +20,7 @@ body#no-background {
   background-image: none;
 }
 
+/* hidden side tab nav, popout on large screens */
 #sidenav a {
   position: fixed;
   right: -100px;
@@ -28,35 +32,28 @@ body#no-background {
   border-radius: 5px 0 0 0;
 }
 
-#sidenav a:active {
+#sidenav a:hover {
   right: 0;
 }
 
-#sidenav a:hover:not(.active) {
-  right: 0;
-}
-
-/* #home {
-  top: 5px;
+/*children of nav*/
+nav > * {
   background-color: #ffcc00;
-  padding: 0 14px 2px 6px !important;
-} */
+}
 
 #about {
   top: 5px;
-  background-color: #ffcc00;
 }
 
 #contact {
   top: 30px;
-  background-color: #ffcc00;
 }
 
 #explore {
   top: 55px;
-  background-color: #ffcc00;
 }
 
+/*centered xy content*/
 .container {
   height: 100vh;
   width: 100vw;
@@ -87,6 +84,7 @@ body#no-background {
   font-size: 1.5em;
 }
 
+/*page body containers*/
 .bodybox {
   width: 60%;
   background-color: rgba(255, 255, 255, 0.25);
@@ -106,6 +104,7 @@ body#no-background {
   font-size: large;
 }
 
+/*text modifiers*/
 p#center {
   text-align: center;
 }
@@ -114,6 +113,7 @@ p/*:first-of-type*/::first-letter {
   font-size: 133%;
 }
 
+/*mailchimp email signup*/
 /* 
   .required-email { 
   width: 30vw;
@@ -142,6 +142,7 @@ p/*:first-of-type*/::first-letter {
 }
 */
 
+/*instagram footer*/
 button {
   background-color: grey;
   position: fixed;
@@ -160,6 +161,7 @@ button {
   opacity: 1;
 }
 
+/*media sizing start*/
 @media screen and (max-width: 1250px) {
   body {
     background-color: #cccccc;
@@ -175,6 +177,7 @@ button {
   }
 }
 
+/*switch to displayed nav, eliminate touchscreen hover, single bg displays*/
 @media screen and (max-width: 1000px), (any-hover: none) {
   body {
     background-position: top center;
@@ -196,10 +199,13 @@ button {
     position: fixed;
     right: 0px;
     padding: 0 0 2px 10px;
-    width: 70px;
+    width: 65px;
     text-decoration: none;
     color: #333366;
     border-radius: 5px 0 0 0;
+  }
+  #sidenav a:hover {
+    width: 100px;
   }
 }
 

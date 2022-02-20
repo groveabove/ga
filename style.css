@@ -28,7 +28,11 @@ body#no-background {
   border-radius: 5px 0 0 0;
 }
 
-#sidenav a:hover {
+#sidenav a:active {
+  right: 0;
+}
+
+#sidenav a:hover:not(.active) {
   right: 0;
 }
 
@@ -48,39 +52,10 @@ body#no-background {
   background-color: #ffcc00;
 }
 
-#projects {
+#explore {
   top: 55px;
   background-color: #ffcc00;
 }
-
-/* .topnav {
-  background-color: #ffcc00;
-  padding: 0px 50px 2px 50px;
-  position: fixed;
-  right: 0;
-  top: 5px;
-}
-
-.topnav a{
-  color: #333366;
-  text-decoration: none;
-  text-align: justify;
-  display: inline;
-}
-
-.topnav a:hover{
-  color: white;
-}
-
-.topnav-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.topnav-li{ 
-  display: inline;
-} */
 
 .container {
   height: 100vh;
@@ -100,16 +75,43 @@ body#no-background {
   padding: 15px;
 }
 
+#logo {
+  width: 100px;
+  padding: 10px;
+  position: fixed;
+}
+
 .haley {
   text-align: end;
   width: 30%;
   font-size: 1.5em;
 }
 
-#construction {
+.bodybox {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 30px 0 30px;
+  padding: 15px;
+}
+
+.bodybox#construction {
   text-align: center;
   padding: 10px;
   font-size: 1.5em;
+}
+
+.bodybox#aboutmain {
+  text-align: justify;
+  padding: 15px;
+  font-size: large;
+}
+
+p#center {
+  text-align: center;
+}
+
+p/*:first-of-type*/::first-letter {
+  font-size: 133%;
 }
 
 /* 

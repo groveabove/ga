@@ -1,0 +1,70 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #ccc;
+}
+
+/*contains entire layout to achieve vertical spacing*/
+.flexcontainer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 100vh;
+}
+
+/*contains logo and nav aligned left & right*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/*contains two main body columns, set to control majority of page*/
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+/*left main body column*/
+.left{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0 0 0 30px;
+    padding: 15px;
+    width: 30%;
+}
+
+/*right main body column*/
+.right{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0 30px 0 0;
+    padding: 15px;
+    width: 30%;
+}
+
+/*contains social media aligned right*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+/*switches to all column display on small screen, resizes main body boxes larger*/
+@media (max-width: 550px) {
+    main {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 80%;
+    }
+    .left {
+        border-radius: 0 30px 0 0;
+    }
+    .right {
+        border-radius: 0 0 0 30px;
+    }

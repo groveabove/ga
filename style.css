@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  overflow: hidden;
 }
 
 /*verious backgrounds*/
@@ -10,7 +11,7 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   background-position: right top, left bottom;
-  background-size: auto 850px, auto 850px;
+  background-size: auto 120%, auto 120%;
   color: #333366;
   font-family: "Garamond", serif;
   margin: 0;

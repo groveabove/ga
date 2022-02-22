@@ -1,7 +1,10 @@
 body {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
     margin: 0;
     background-color: #ccc;
+    font-family: 'Garamond', 'serif';
 }
 
 /*contains entire layout to achieve vertical spacing*/
@@ -17,33 +20,64 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
+    margin: .5rem;
 }
 
-/*contains two main body columns, set to control majority of page*/
+/*contains flex nav*/
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .3rem;
+    list-style-type: none;
+    margin: 0 -0.5rem 0 0; /*counteracts header margin*/
+    padding: 0;
+}
+
+/*nav side tabs partially hidden offscreen*/
+li a{
+    color: #333366;
+    text-decoration: none;
+    display: block;
+    background-color: #ffcc00;
+    padding: 0 20px 0 20px;
+    border-radius: .5rem 0 0 0;
+    width: 50px;
+    transform: translateX(70px); /*moves nav mostly offscreen*/
+}
+
+/*nav side tabs display on hover*/
+li a:hover{
+    transform: none;
+    transition: all 0.3s ease;
+}
+
+/*contains two main boxes, set to control majority of page*/
 main{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1rem;
     flex: 1;
 }
 
-/*left main body column*/
+/*left main body box*/
 .left{
     background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 0 0 0 30px;
-    padding: 15px;
-    width: 30%;
+    border-radius: 0 0 0 1.5rem;
+    padding: 1rem;
+    flex-basis: 30%;
+    min-height: 50%; /*define bc flex is row*/
 }
 
-/*right main body column*/
+/*right main body box*/
 .right{
     background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 0 30px 0 0;
-    padding: 15px;
-    width: 30%;
+    border-radius: 0 1.5rem 0 0;
+    padding: 1rem;
+    flex-basis: 30%; /*orientation is row, this controls horizontal width*/
+    min-height: 50%; /*orientation is row, this controls vertical height*/
 }
 
 /*contains social media aligned right*/
@@ -51,20 +85,32 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: 10px;
+    margin: .5rem;
+}
+
+/*eliminates hover on touchscreens, displays nav as screen gets smaller*/
+@media screen and (max-width: 1000px), (any-hover:none){
+    li a{
+        transform: none; /*keeps nav aligned on screen*/
+    }
+    li a:hover{
+        width: 100px; /*widens on hover if not touchscreen*/
+    } 
 }
 
 /*switches to all column display on small screen, resizes main body boxes larger*/
-@media (max-width: 550px) {
+@media screen and (max-width: 800px) {
     main {
         flex-direction: column;
     }
     .left, .right {
-        width: 80%;
+        width: 80%; /*orientation is column now, this controls horizontal width*/
+        min-height: auto; /*eliminates control from code above*/
+        flex-basis: 50%; /*orientation is column now, this controls vertical height*/
     }
     .left {
-        border-radius: 0 30px 0 0;
+        border-radius: 0 1.5rem 0 0;
     }
     .right {
-        border-radius: 0 0 0 30px;
+        border-radius: 0 0 0 1.5rem;
     }

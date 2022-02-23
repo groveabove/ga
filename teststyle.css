@@ -4,8 +4,10 @@ body {
     overflow-x: hidden;
     margin: 0;
     background-color: #ccc;
-    font-family: 'Garamond', 'serif';
+    font-family: 'Garamond', serif;
+    font-size: auto;
 }
+
 
 /*contains entire layout to achieve vertical spacing*/
 .flexcontainer{
@@ -15,16 +17,22 @@ body {
     height: 100vh;
 }
 
+
 /*contains logo and nav aligned left & right*/
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: .5rem;
 }
 
+.logo {
+    height: 4.26rem;
+}
+
 /*contains flex nav*/
-ul {
+nav ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -35,22 +43,23 @@ ul {
 }
 
 /*nav side tabs partially hidden offscreen*/
-li a{
+nav ul li a{
     color: #333366;
     text-decoration: none;
     display: block;
     background-color: #ffcc00;
-    padding: 0 20px 0 20px;
+    padding: 1px 20px 1px 20px;
     border-radius: .5rem 0 0 0;
     width: 50px;
-    transform: translateX(70px); /*moves nav mostly offscreen*/
+    transform: translateX(70px); /*moves nav mostly offscreen - pixels bc I'm dumb and don't understand rem*/
 }
 
 /*nav side tabs display on hover*/
-li a:hover{
+nav ul li a:hover{
     transform: none;
     transition: all 0.3s ease;
 }
+
 
 /*contains two main boxes, set to control majority of page*/
 main{
@@ -80,6 +89,7 @@ main{
     min-height: 50%; /*orientation is row, this controls vertical height*/
 }
 
+
 /*contains social media aligned right*/
 footer {
     display: flex;
@@ -88,13 +98,20 @@ footer {
     margin: .5rem;
 }
 
+.instagram {
+    width: 1.875rem;
+    height: 1.875rem; /*gets rid of weird margin when applied to a, otherwise resizes img*/
+}
+
+
 /*eliminates hover on touchscreens, displays nav as screen gets smaller*/
 @media screen and (max-width: 1000px), (any-hover:none){
-    li a{
+    nav ul li a{
         transform: none; /*keeps nav aligned on screen*/
     }
-    li a:hover{
+    nav ul li a:hover{
         width: 100px; /*widens on hover if not touchscreen*/
+        font-weight: bold;
     } 
 }
 

@@ -1,0 +1,174 @@
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #ccc;
+  font-family: "Garamond", serif;
+  color: #333366;
+}
+
+/*contains entire layout to achieve vertical spacing*/
+.flexcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*vertical*/
+  height: 100%;
+}
+
+/*contains logo and nav aligned left & right*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /*horizontal*/
+  align-content: center; /*vertical*/
+  margin: 0.5rem;
+}
+
+.logo {
+  height: 4.26rem;
+}
+
+/*contains flex nav*/
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /*keeps nav aligned right*/
+  gap: 0.3rem;
+  list-style-type: none;
+  margin: 0 -0.5rem 0 0; /*counteracts header margin*/
+  padding: 0;
+}
+
+/*nav side tabs partially hidden offscreen*/
+nav ul li a {
+  color: #333366;
+  text-decoration: none;
+  display: block;
+  background-color: #ffcc00;
+  padding: 1px 20px 1px 20px;
+  border-radius: 0.5rem 0 0 0;
+  width: 50px;
+  transform: translateX(
+    70px
+  ); /*moves nav mostly offscreen - pixels bc I'm dumb and don't understand rem*/
+}
+
+/*nav side tabs display on hover*/
+nav ul li a:hover {
+  transform: none;
+  transition: all 0.3s ease;
+}
+
+/*contains two main boxes or one large box, set to control majority of page*/
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /*horizontal*/
+  align-items: center;
+  margin: 1rem 0 1rem 0;
+  gap: 1rem;
+}
+
+main.fill {
+  flex: 1; /*children fill vertical body space*/
+}
+
+/*single large main body box*/
+.single {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 1.5rem 0 1.5rem;
+  padding: 1rem;
+  flex-basis: 60%; /*horizontal width*/
+}
+
+/*left main body box*/
+.left {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 0 0 1.5rem;
+  padding: 1rem;
+  flex-basis: 35%; /*horizontal width*/
+}
+
+/*right main body box*/
+.right {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 1.5rem 0 0;
+  padding: 1rem;
+  flex-basis: 35%; /*horizontal width*/
+}
+
+/*text modifiers*/
+p.center {
+  text-align: center;
+}
+
+p/*:first-of-type*/::first-letter {
+  font-size: 133%;
+}
+
+/*contains social media aligned right*/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /*horizontal*/
+  align-items: flex-end; /*vertical*/
+  margin: 0.5rem;
+}
+
+.footernav a {
+  color: #333366;
+  text-decoration: none;
+}
+
+.footernav a:hover {
+  font-weight: bold;
+}
+
+.instagram {
+  width: 1.875rem;
+  height: 1.875rem; /*gets rid of weird margin when applied to a, resizes img*/
+}
+
+.instagram:hover {
+  filter: hue-rotate(88deg) saturate(186%) brightness(186%);
+}
+
+/*eliminates hover on touchscreens, displays nav as screen gets smaller*/
+@media screen and (max-width: 1200px), (any-hover: none) {
+  nav ul li a {
+    transform: none; /*keeps nav aligned on screen*/
+  }
+  nav ul li a:hover {
+    width: 100px; /*widens on hover if not touchscreen*/
+    font-weight: bold;
+  }
+  .left,
+  .right {
+    flex-basis: 40%; /*horizontal width*/
+    transition: all 0.5s ease;
+  }
+}
+
+/*switches to all column display on small screen, resizes main body boxes larger*/
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+    align-items: center; /*horizontal*/
+  }
+  .single,
+  .left,
+  .right {
+    width: 80%; /*horizontal width*/
+  }
+  .left {
+    border-radius: 0 1.5rem 0 0;
+  }
+  .right {
+    border-radius: 0 0 0 1.5rem;
+  }
+}

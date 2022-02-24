@@ -1,0 +1,157 @@
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Garamond", serif;
+  color: #333366;
+  background-color: #ccc;
+  background-image: url("/mainbg1080.jpg"), url("/mainbg1080_180rotate.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position: right top, left bottom;
+  background-size: auto 120%, auto 120%;
+}
+
+/*contains entire layout to achieve vertical spacing*/
+.flexcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*vertical*/
+  height: 100%;
+}
+
+/*contains logo and nav aligned left & right*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /*horizontal*/
+  align-content: center; /*vertical*/
+  margin: 0.5rem;
+}
+
+.logo {
+  height: 4.26rem;
+  visibility: hidden; /*do not display logo on homepage*/
+}
+
+/*contains flex nav*/
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /*keeps nav aligned right*/
+  gap: 0.3rem;
+  list-style-type: none;
+  margin: 0 -0.5rem 0 0; /*counteracts header margin*/
+  padding: 0;
+}
+
+/*nav side tabs partially hidden offscreen*/
+nav ul li a {
+  color: #333366;
+  text-decoration: none;
+  display: block;
+  background-color: #ffcc00;
+  padding: 1px 20px 1px 20px;
+  border-radius: 0.5rem 0 0 0;
+  width: 50px;
+  transform: translateX(
+    70px
+  ); /*moves nav mostly offscreen - pixels bc I'm dumb and don't understand rem*/
+}
+
+/*nav side tabs display on hover*/
+nav ul li a:hover {
+  transform: none;
+  transition: all 0.3s ease;
+}
+
+/*controls majority of page*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*vertical*/
+  align-items: center; /*horizontal*/
+  margin: 1rem 0 1rem 0;
+  flex: 1; /*fills undefined body space*/
+}
+
+/*styles home logo container*/
+.homelogo {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 1.5rem 0 1.5rem;
+  padding: 0.75rem;
+  width: 30%;
+}
+
+/*sizes home logo relative to its container*/
+#homelogo {
+  width: 100%;
+  filter: drop-shadow(0.05rem 0.05rem 0.1rem white);
+}
+
+.homelogodescription {
+  width: 30%;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: end;
+}
+
+/*contains social media aligned right*/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /*horizontal*/
+  align-items: flex-end; /*vertical*/
+  margin: 0.5rem;
+}
+
+#copyright {
+  font-style: italic;
+}
+
+.instagram {
+  width: 1.875rem;
+  height: 1.875rem; /*gets rid of weird margin when applied to a, resizes img*/
+}
+
+.instagram:hover {
+  filter: hue-rotate(88deg) saturate(186%) brightness(186%);
+}
+
+/*eliminates hover on touchscreens, displays nav as screen gets smaller switches to single bg*/
+@media screen and (max-width: 1200px), (any-hover: none) {
+  body {
+    background-position: top center;
+    background-size: 100%;
+    transition: all 0.5s ease;
+  }
+  nav ul li a {
+    transform: none; /*keeps nav aligned on screen*/
+  }
+  nav ul li a:hover {
+    width: 100px; /*widens on hover if not touchscreen*/
+    font-weight: bold;
+  }
+  .homelogo,
+  .homelogodescription {
+    width: 60%;
+    transition: all 0.5s ease;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-position: top right;
+    background-size: auto 850px;
+    transition: all 0.5s ease;
+  }
+  .homelogodescription {
+    font-size: 1.2rem;
+    filter: drop-shadow(0.05rem 0rem 0.05rem white);
+  }
+}

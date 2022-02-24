@@ -13,7 +13,7 @@ body {
 }
 
 /*contains entire layout to achieve vertical spacing*/
-.flexcontainer {
+.flex-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /*vertical*/
@@ -76,7 +76,7 @@ main {
 }
 
 /*OPTION: Single centered large main body box*/
-.single {
+.single-box {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 0 1.5rem 0 1.5rem;
   padding: 1rem;
@@ -85,7 +85,8 @@ main {
 
 /*OPTION: Image gallery*/
 /*each use of class is one column*/
-.gallery {
+.gallery-left,
+.gallery-right {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
@@ -94,32 +95,32 @@ main {
 }
 
 /*left boxes*/
-.left {
+.box-left {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 0 0 0 1.5rem;
   padding: 1rem;
   max-width: 100%;
 }
 
-img.fitleft {
+img.fit-left {
   width: 100%;
   border-radius: 0 0 0 1.5rem;
 }
 
 /*Description will show top right of image, hiding under image option. When on below, it shows under first image in column*/
-#descriptionhideleft {
+#description-hide-left {
   display: none;
 }
 
 /*right boxes*/
-.right {
+.box-right {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 0 1.5rem 0 0;
   padding: 1rem;
   max-width: 100%;
 }
 
-img.fitright {
+img.fit-right {
   width: 100%;
   border-radius: 0 1.5rem 0 0;
 }
@@ -142,12 +143,12 @@ footer {
   margin: 0.5rem;
 }
 
-.footernav a {
+.footer-nav a {
   color: #333366;
   text-decoration: none;
 }
 
-.footernav a:hover {
+.footer-nav a:hover {
   font-weight: bold;
 }
 
@@ -172,7 +173,8 @@ footer {
     width: 80%;
     transition: all 1s ease;
   }
-  .gallery {
+  .gallery-left,
+  .gallery-right {
     margin-top: 1rem;
     transition: all 1s ease;
   }
@@ -186,13 +188,13 @@ footer {
     gap: 0;
     column-gap: 1rem;
   }
-  .single {
+  .single-box {
     width: 100%; /*horizontal width*/
   }
-  #descriptionhideleft {
+  #description-hide-left {
     display: inline; /*Description will show under first image*/
   }
-  #descriptionhideright {
+  #description-hide-right {
     display: none;
   }
 }

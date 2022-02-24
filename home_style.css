@@ -137,8 +137,8 @@ footer {
     width: 100px; /*widens on hover if not touchscreen*/
     font-weight: bold;
   }
-  .homelogo,
-  .homelogodescription {
+  .home-logo-box,
+  .home-logo-description {
     width: 60%;
     transition: all 0.5s ease;
   }
@@ -150,7 +150,7 @@ footer {
     background-size: auto 850px;
     transition: all 0.5s ease;
   }
-  .homelogodescription {
+  .home-logo-description {
     font-size: 1.2rem;
     filter: drop-shadow(0.05rem 0rem 0.05rem white);
   }

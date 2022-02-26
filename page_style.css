@@ -139,19 +139,20 @@ p:first-of-type::first-letter {
   font-size: 133%;
 }
 
-p.details:first-of-type::first-letter {
-  font-size: 100%;
-}
-
-p.details {
-  margin: 1rem;
-}
-
 h1 {
   font-size: 1.2rem;
   font-style: italic;
   font-weight: 600;
   margin: 0 0 1.5rem 0;
+}
+
+.details {
+  margin: 1em;
+}
+
+/*removes default paragraph styling*/
+p.details:first-of-type::first-letter {
+  font-size: 100%;
 }
 
 /*contains social media aligned right*/

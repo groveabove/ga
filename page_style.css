@@ -25,13 +25,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between; /*horizontal*/
-  align-items: center; /*vertical*/
+  align-items: flex-start; /*vertical*/
   margin: 0.5rem;
 }
 
 .logo {
   /* height: 4.26rem; */ /*size that matches nav*/
-  height: 3.5rem;
+  height: 3rem;
 }
 
 /*contains flex nav*/
@@ -80,6 +80,15 @@ main {
   align-self: center;
 }
 
+/*OPTION: Single centered large main body box*/
+.single-box {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 1.5rem 0 1.5rem;
+  padding: 1rem;
+  flex-basis: 100%; /*horizontal width*/
+}
+
+/*OPTION: Give single body box a decorative top & bottom*/
 .decoration-container {
   display: flex;
   flex-direction: column;
@@ -89,22 +98,15 @@ main {
 }
 
 img.decoration {
-  width: 7rem;
+  width: 9rem;
 }
 
 img.decoration#flip {
   transform: rotate(180deg);
+  width: 12rem;
 }
 
-/*OPTION: Single centered large main body box*/
-.single-box {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 0 1.5rem 0 1.5rem;
-  padding: 1rem;
-  flex-basis: 100%; /*horizontal width*/
-}
-
-/*OPTION: Image gallery*/
+/*OPTION: Two column image gallery*/
 /*each use of class is one column*/
 .gallery-left,
 .gallery-right {
@@ -236,6 +238,9 @@ ul.footer-nav {
     align-items: center; /*horizontal*/
     gap: 0;
     column-gap: 1rem;
+  }
+  img.decoration {
+    display: none;
   }
   .single-box {
     width: 100%; /*horizontal width*/

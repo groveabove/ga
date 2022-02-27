@@ -80,6 +80,22 @@ main {
   align-self: center;
 }
 
+.decoration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  flex-basis: 100%; /*horizontal width*/
+}
+
+img.decoration {
+  width: 7rem;
+}
+
+img.decoration#flip {
+  transform: rotate(180deg);
+}
+
 /*OPTION: Single centered large main body box*/
 .single-box {
   background-color: rgba(255, 255, 255, 0.25);

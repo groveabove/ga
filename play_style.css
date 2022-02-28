@@ -1,40 +1,71 @@
-.whole-page-column-flex-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+html {
   height: 100%;
-  margin: 0;
-  background-color: aqua;
-  padding: 5px;
-  /*align children*/
-  justify-content: space-between; /*cross-axis, vertical spacing*/
+  width: 100%;
 }
 
-.header {
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.whole-page-column-flex-container {
+  width: 100%;
+  min-height: 100%;
+  background-color: aqua;
+  /*align children*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*-axis, vertical spacing*/
+}
+
+header {
   display: inline-flex;
   padding: 5px;
   background-color: yellow;
 }
 
 .main-row {
+  flex-basis: 50%; /*vertical height along main axis (defined by whole-page-column-flex-container)*/
+  width: 80%;
+  align-self: center; /*horizontal alignment of main container*/
+  padding: 15px;
+  margin: 10px;
+  background-color: pink;
+  /*align children*/
   display: flex;
   flex-direction: row;
-  flex-basis: 70%; /*main-axis, horizontal width*/
-  justify-content: center; /*main-axis, horizontal spacing*/
-  align-items: center; /*cross-axis, vertical spacing*/
-  padding: 5px;
-  background-color: pink;
+  flex-wrap: wrap;
+  justify-content: center; /*controls children, horizontal spacing*/
+  align-items: space-evenly; /*controls children, cross-axis, vertical spacing*/
+  gap: 1rem;
+}
+
+.content-box {
+  flex-basis: 48%; /*main-axis width*/
+  /* padding: 5px; */
+  background-color: orange;
+  /*align content*/
+  display: inline-flex; /*defines row alignment*/
+  justify-content: center; /*horizontal*/
+  align-items: center; /*vertical*/
+}
+
+#two {
+  align-self: flex-start;
+  height: 30%;
 }
 
 .main-column {
   width: 70%; /*cross-axis, horizontal width*/
-  justify-content: center; /*cross-axis, horizontal spacing*/
-  align-items: center; /*main-axis, vertical spacing*/
+  align-self: center;
   padding: 5px;
   background-color: pink;
+  /*align children*/
+  justify-content: center; /*cross-axis, horizontal spacing*/
+  align-items: center; /*main-axis, vertical spacing*/
 }
 
-.footer {
+footer {
   display: inline-flex;
   padding: 5px;
   background-color: blueviolet;

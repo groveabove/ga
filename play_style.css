@@ -1,0 +1,41 @@
+.whole-page-column-flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: aqua;
+  padding: 5px;
+  /*align children*/
+  justify-content: space-between; /*cross-axis, vertical spacing*/
+}
+
+.header {
+  display: inline-flex;
+  padding: 5px;
+  background-color: yellow;
+}
+
+.main-row {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 70%; /*main-axis, horizontal width*/
+  justify-content: center; /*main-axis, horizontal spacing*/
+  align-items: center; /*cross-axis, vertical spacing*/
+  padding: 5px;
+  background-color: pink;
+}
+
+.main-column {
+  width: 70%; /*cross-axis, horizontal width*/
+  justify-content: center; /*cross-axis, horizontal spacing*/
+  align-items: center; /*main-axis, vertical spacing*/
+  padding: 5px;
+  background-color: pink;
+}
+
+.footer {
+  display: inline-flex;
+  padding: 5px;
+  background-color: blueviolet;
+}

@@ -289,6 +289,9 @@ ul.footer-nav {
   .single-box {
     width: 100%; /*horizontal width*/
   }
+  .decoration-container {
+    margin-bottom: 1rem;
+  }
   .contact-container {
     width: 150%;
     transition: none;

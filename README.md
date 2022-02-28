@@ -1,3 +1,4 @@
 # Grove Above
-Grove Above website
-By Haley Bernadette
+Grove Above
+Fine Porcelain Chandeliers
+by Haley B. Schweizer

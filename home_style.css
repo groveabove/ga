@@ -10,7 +10,8 @@ body {
   font-family: "Garamond", serif;
   color: #333366;
   background-color: #ccc;
-  background-image: url("/mainbg1080.jpg"), url("/mainbg1080_180rotate.jpg");
+  background-image: url("images/mainbg1080.jpg"),
+    url("images/mainbg1080_180rotate.jpg");
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   background-position: right top, left bottom;

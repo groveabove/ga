@@ -203,7 +203,6 @@ h2 {
 }
 
 a#collection {
-  display: inline-flexbox;
   text-decoration: none;
   color: #333366;
 }

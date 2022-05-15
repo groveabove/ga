@@ -206,10 +206,6 @@ a#collection {
   display: inline-flexbox;
   text-decoration: none;
   color: #333366;
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 600;
-  text-align: center;
 }
 
 p.details {

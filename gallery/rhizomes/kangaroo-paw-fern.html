@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Grove Above" />
+    <meta name="author" content="Haley B. Schweizer" />
+    <link href="page_style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script
+      async
+      defer
+      data-website-id="ef20da7d-0d9d-46a6-acd4-b12c7df92704"
+      src="https://droplet.groveabove.com/info.js"
+    ></script>
+    <title>Grove Above - Gallery - Kangaroo Paw Chandelier</title>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <header>
+        <div class="logo">
+          <a href="index.html" alt="Home - Grove Above"
+            ><img class="logo" src="ga_logo.png" alt="Logo - Grove Above"
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="about.html" alt="About - Grove Above">about</a></li>
+            <li>
+              <a href="contact.html" alt="Contact - Grove Above">contact</a>
+            </li>
+            <li>
+              <a
+                id="active"
+                href="gallery.html"
+                alt="Explore the Gallery - Grove Above"
+                >explore</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="gallery-left">
+          <div class="box-left">
+            <img
+              class="fit-left"
+              src="images/kp/KP_front_800w.png"
+              alt="Kangaroo Paw Front Image - Grove Above"
+            />
+          </div>
+
+          <!-- ALERT! -- "LFFT" UNDER IMAGE -- Script is duplicating this section! - ALERT! -->
+          <div id="description-hide-left" class="box-left">
+            <h1>
+              The Rhizome Collection / Kangaroo Paw Fern Chandelier
+              <!-- future breadcrumb -->
+            </h1>
+            <p class="details">
+              <u>Dimensions:</u>
+              12 in. W x 26 in. H* x 15 in. D
+              <br />
+              *customizable downrods
+            </p>
+            <p class="details">
+              <u>Materials:</u>
+              Porcelain, raw brass, & remnant acrylic.
+            </p>
+            <p class="details">
+              Sourcing is one of our highest priorities! Grove Above’s pure
+              white porcelain is mixed in-house from domestic USA materials and
+              a little bit from New Zealand, home of the native Kangaroo Paw
+              Fern.
+              <!--We do our best to source our brass domestically as well. Whenever possible, we use remnant, reclaimed, or recycled materials. Someone else’s scraps are our treasure!-->
+            </p>
+            <p class="details">
+              In addition to our in-house porcelain, this particular piece
+              features an Italian cast brass canopy. Pre-fabricated brass
+              components and electrical components were sourced from a small USA
+              business. In-house fabricated brass components were crafted from
+              USA raw brass. The acrylic was found in a local store’s scrap bin
+              and was originally manufactured by Plastiglas de Mexico S.A. de
+              C.V. Our silicone bushings were custom cast from USA silicone, and
+              even the washers and nuts are USA made. Please reach out if you’d
+              like to know more.
+            </p>
+          </div>
+          <!-- END ALERT! -->
+
+          <div class="box-left">
+            <img
+              class="fit-left"
+              src="images/kp/KP_interior_side_lit_800w.png"
+              alt="Kangaroo Paw Side Interior Design Image Lit - Grove Above"
+            />
+          </div>
+
+          <div class="box-left">
+            <img
+              class="fit-left"
+              src="images/kp/KP_front_lit_800w.png"
+              alt="Kangaroo Paw Front Image Lit - Grove Above"
+            />
+          </div>
+
+          <div class="box-left">
+            <img
+              class="fit-left"
+              src="images/kp/KP_side_800w.png"
+              alt="Kangaroo Paw Side Image - Grove Above"
+            />
+          </div>
+        </div>
+
+        <div class="gallery-right">
+          <div class="box-right">
+            <img
+              class="fit-right"
+              src="images/kp/KP_interior_front_troublemaker_800w.png"
+              alt="Kangaroo Paw Front Interior Design Image with Troublemaker Cat - Grove Above"
+            />
+          </div>
+
+          <div class="box-right">
+            <img
+              class="fit-right"
+              src="images/kp/KP_threequarter_800w.png"
+              alt="Kangaroo Paw Three Quarter Image - Grove Above"
+            />
+          </div>
+
+          <div class="box-right">
+            <img
+              class="fit-right"
+              src="images/kp/KP_kindaclose_800w.png"
+              alt="Kangaroo Paw Semi-Close-Up Image Lit - Grove Above"
+            />
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <ul class="footer-nav">
+          <li class="footer-nav">
+            <a href="index.html" alt="Home - Grove Above">home</a>
+          </li>
+          <li class="footer-nav">
+            <a href="about.html" alt="About - Grove Above">about</a>
+          </li>
+          <li class="footer-nav">
+            <a href="contact.html" alt="Contact - Grove Above">contact</a>
+          </li>
+          <li class="footer-nav">
+            <a href="gallery.html" alt="Explore the Gallery - Grove Above"
+              >explore</a
+            >
+          </li>
+          <li>© 2022 Haley B. Schweizer</li>
+        </ul>
+
+        <a class="instagram" href="https://www.instagram.com/groveabove/">
+          <img
+            class="instagram"
+            src="insta.png"
+            alt="instagram @groveabove fine porcelain lighting"
+          />
+        </a>
+      </footer>
+    </div>
+    <script>
+      const boxLeft = document.getElementById("description-hide-left");
+      const boxRight = boxLeft.cloneNode(true);
+      boxRight.className = "box-right";
+      boxRight.id = "description-hide-right";
+      const prependTo = document.getElementsByClassName("gallery-right");
+      prependTo[0].prepend(boxRight);
+    </script>
+  </body>
+</html>

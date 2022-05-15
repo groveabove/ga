@@ -188,10 +188,24 @@ p:first-of-type::first-letter {
 }
 
 h1 {
+  /* header on info card of each portfolio piece */
   font-size: 1.2rem;
   font-style: italic;
   font-weight: 600;
-  margin: 0 0 1.5rem 0;
+}
+
+h2 {
+  /* header on explore gallery page */
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+}
+
+a#collection {
+  display: inline-flexbox;
+  text-decoration: none;
+  color: #333366;
 }
 
 p.details {

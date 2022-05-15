@@ -34,6 +34,14 @@ header {
   height: 3rem;
 }
 
+a {
+  color:#333366;
+}
+
+a:visited {
+  color: #333366;
+}
+
 /*contains flex nav*/
 nav ul {
   display: flex;
@@ -205,6 +213,10 @@ h2 {
 a#collection {
   text-decoration: none;
   color: #333366;
+}
+
+a#collection:hover {
+  filter: drop-shadow(0 0 0.01rem #333366);
 }
 
 p.details {

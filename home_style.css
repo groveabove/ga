@@ -10,8 +10,8 @@ body {
   font-family: "Garamond", serif;
   color: #333366;
   background-color: #ccc;
-  background-image: url("images/mainbg1080.jpg"),
-    url("images/mainbg1080_180rotate.jpg");
+  background-image: url("/images/mainbg1080.jpg"),
+    url("/images/mainbg1080_180rotate.jpg");
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
   background-position: right top, left bottom;
@@ -59,15 +59,13 @@ nav ul li a {
   background-color: #ffcc00;
   padding: 1px 20px 1px 20px;
   border-radius: 0.5rem 0 0 0;
-  width: 50px;
-  transform: translateX(
-    70px
-  ); /*moves nav mostly offscreen - pixels bc I'm dumb and don't understand rem*/
+  width: 45px;
+  transform: none;
 }
 
 /*nav side tabs display on hover*/
 nav ul li a:hover {
-  transform: none;
+  width: 100px;
   transition: all 0.3s ease;
 }
 
@@ -136,7 +134,7 @@ footer {
   }
   nav ul li a:hover {
     width: 100px; /*widens on hover if not touchscreen*/
-    font-weight: bold;
+    /* font-weight: bold; */
   }
   .home-logo-box,
   .home-logo-description {

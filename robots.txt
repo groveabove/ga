@@ -1,4 +1,4 @@
-User-agent: \*
+User-agent: *
 Disallow: /testing/
 
 Sitemap: https://groveabove.com/sitemap.xml

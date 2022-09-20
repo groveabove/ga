@@ -18,10 +18,10 @@ body {
       background-position: right top, left bottom;
       background-size: auto 120%, auto 120%;
       -- END OLD */
-  background-image: url("/images/bgright.png");
+  background-image: url("https://groveabove.com/images/bgright.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: 50% 46%;
   background-size: cover;
 }
 
@@ -97,7 +97,7 @@ main {
 /*sizes home logo relative to its container*/
 #home-logo {
   width: 100%;
-  filter: drop-shadow(0.05rem 0.05rem 0.1rem white);
+  filter: drop-shadow(0.05rem 0.05rem 0.2rem white);
 }
 
 .home-logo-description {
@@ -132,7 +132,7 @@ footer {
 /*eliminates hover on touchscreens, displays nav as screen gets smaller switches to single bg*/
 @media screen and (max-width: 1200px), (any-hover: none) {
   body {
-    background-position: top center;
+    background-position: center;
     background-size: 100%;
     transition: all 0.5s ease;
   }
@@ -152,7 +152,7 @@ footer {
 
 @media screen and (max-width: 500px) {
   body {
-    background-position: top right;
+    background-position: center right;
     background-size: auto 850px;
     transition: all 0.5s ease;
   }

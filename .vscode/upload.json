@@ -1,0 +1,27 @@
+{
+    "server": {
+        "host": "192.81.213.12",
+        "port": 22,
+        "user": "jay"
+    },
+    "files": [
+        {
+            "localfile": "/home/sean/Project/upload/test/TestApp",
+            "remotefile": "/apps/test/TestApp"
+        },
+        {
+            "localfile": "/home/sean/Project/upload/test/Test.js",
+            "remotefile": "/apps/test/test.js"
+        }
+    ],
+    "dirs":[
+        {
+            "localdir":"/run/mount/svcs/wifimg/program",
+            "remotedir":"/apps/tests/program"
+        },
+        {
+            "localdir":"/run/mount/svcs/tmsync",
+            "remotedir":"/apps/tests2"
+        }
+    ]
+}

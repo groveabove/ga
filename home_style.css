@@ -18,7 +18,7 @@ body {
       background-position: right top, left bottom;
       background-size: auto 120%, auto 120%;
       -- END OLD */
-  background-image: url("/images/bgright.png"),
+  background-image: url("/images/bgright.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

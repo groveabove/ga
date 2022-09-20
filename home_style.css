@@ -11,14 +11,14 @@ body {
   color: #333366;
   background-color: #ccc;
       /* OLD --
-      background-image: url("/images/mainbg1080.jpg"),
-        url("/images/mainbg1080_180rotate.jpg");
+      background-image: url("/site-images/mainbg1080.jpg"),
+        url("/site-images/mainbg1080_180rotate.jpg");
       background-repeat: no-repeat, no-repeat;
       background-attachment: fixed, fixed;
       background-position: right top, left bottom;
       background-size: auto 120%, auto 120%;
       -- END OLD */
-  background-image: url("https://groveabove.com/images/bgright.png");
+  background-image: url("/site-images/bgright.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 46%;

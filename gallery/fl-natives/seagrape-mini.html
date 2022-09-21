@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The Seagrape Mini Chandelier is handcrafted porcelain, platinum silicone, brass, and steel. Created by ceramic artist Haley B. Schweizer, this custom light is part of Grove Above's Florida Native Collection and was inspired by the saucer-shaped leaves of the coastal Coccoloba uvifera."
+    />
+    <meta name="author" content="Haley B. Schweizer" />
+    <link href="/page_style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <script
+      async
+      defer
+      data-website-id="ef20da7d-0d9d-46a6-acd4-b12c7df92704"
+      src="https://droplet.groveabove.com/info.js"
+    ></script>
+    <title>Grove Above - Gallery - Seagrape Mini Chandelier</title>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <header>
+        <div class="logo">
+          <a href="/index.html" alt="Home - Grove Above"
+            ><img
+              class="logo"
+              src="/site-images/ga_logo.png"
+              alt="Logo - Grove Above"
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/about.html" alt="About - Grove Above">about</a></li>
+            <li>
+              <a href="/contact.html" alt="Contact - Grove Above">contact</a>
+            </li>
+            <li>
+              <a href="/gallery.html" alt="Explore the Gallery - Grove Above"
+                >explore
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="gallery-left">
+          <div class="box-left">
+            <img
+              class="fit-left"
+              src="/images/sg/Seagrape_lit_800w.png"
+              alt="Seagrape Lit - Grove Above"
+            />
+          </div>
+
+          <!-- ALERT! -- "LFFT" UNDER IMAGE -- Script is duplicating this section! - ALERT! -->
+          <div id="description-hide-left" class="box-left">
+            <h1>
+              The Florida Native Collection / Seagrape Mini Chandelier
+              <!-- future breadcrumb -->
+            </h1>
+            <p class="details">
+              <u>Dimensions:</u>
+              TBD
+            </p>
+            <p class="details">
+              <u>Materials:</u>
+              Porcelain, platinum silicone, brass, & steel
+            </p>
+            <p class="details">
+              Seagrapes are a native Florida tree, branching upwards with long
+              spindly stalks and showcasing beautiful saucer-shaped leaves.
+              While they seem a little alien to the unfamiliar, they are
+              ubiqitous throughout the state.
+              <a
+                href="https://gardeningsolutions.ifas.ufl.edu/plants/trees-and-shrubs/trees/sea-grape.html"
+                target="_blank"
+                rel="noreferrer noopener"
+                alt="Seagrape Information from the University of Florida"
+                >Read more</a
+              >
+              from the University of Florida.
+            </p>
+            <p class="details">
+              These particular leaves were cast from a fresh leaves off of a
+              Seagrape in our front yard, originally sourced from a local native
+              nursery. If you look closely, this piece culminates with a
+              silicone bud.
+            </p>
+          </div>
+          <!-- END ALERT! -->
+
+          <div class="box-left">
+            <img
+              class="fit-left"
+              src="/images/sg/Seagrape_unlit_interior_800w.png"
+              alt="Seagrape Interior View Unlit - Grove Above"
+            />
+          </div>
+
+          <div class="box-left">
+            <img
+              class="fit-left"
+              src="/images/sg/Seagrape_unlit_800w.png"
+              alt="Seagrape Unlit - Grove Above"
+            />
+          </div>
+        </div>
+
+        <div class="gallery-right">
+          <div class="box-right">
+            <img
+              class="fit-right"
+              src="/images/sg/Seagrape_lit_detail_800w.png"
+              alt="Seagrape Detail Lit - Grove Above"
+            />
+          </div>
+
+          <div class="box-right">
+            <img
+              class="fit-right"
+              src="/images/sg/Seagrape_lit_below_800w.png"
+              alt="Seagrape Bottom Detail Lit - Grove Above"
+            />
+          </div>
+
+          <div class="box-right">
+            <img
+              class="fit-right"
+              src="/images/sg/Seagrape_lit_ii_800w.png"
+              alt="Seagrape Lit ii - Grove Above"
+            />
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <ul class="footer-nav">
+          <li class="footer-nav">
+            <a href="/index.html" alt="Home - Grove Above">home</a>
+          </li>
+          <li class="footer-nav">
+            <a href="/about.html" alt="About - Grove Above">about</a>
+          </li>
+          <li class="footer-nav">
+            <a href="/contact.html" alt="Contact - Grove Above">contact</a>
+          </li>
+          <li class="footer-nav">
+            <a href="/gallery.html" alt="Explore the Gallery - Grove Above"
+              >explore</a
+            >
+          </li>
+          <li>© 2022 Haley B. Schweizer</li>
+        </ul>
+
+        <a class="instagram" href="https://www.instagram.com/groveabove/">
+          <img
+            class="instagram"
+            src="/site-images/insta.png"
+            alt="instagram @groveabove fine porcelain lighting"
+          />
+        </a>
+      </footer>
+    </div>
+    <script>
+      const boxLeft = document.getElementById("description-hide-left");
+      const boxRight = boxLeft.cloneNode(true);
+      boxRight.className = "box-right";
+      boxRight.id = "description-hide-right";
+      const prependTo = document.getElementsByClassName("gallery-right");
+      prependTo[0].prepend(boxRight);
+    </script>
+  </body>
+</html>

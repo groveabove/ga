@@ -62,11 +62,28 @@
               href="/gallery/fl-natives.html"
               alt="Seagrape Chandelier - The Florida Native Collection - Grove Above"
             >
+            <div class="mySlides1 fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png">
+              <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png">
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png">
+              <div class="text">Caption Three</div>
+            <!-- </div>
               <img
                 class="fit-left"
                 src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
                 alt="Seagrape Mini Dim Lit - Grove Above"
-              />
+              /> -->
             </a>
           </div>
         </div>
@@ -128,4 +145,30 @@
       </footer>
     </div>
   </body>
+  <script>
+    let slideIndex = [1, 1];
+    /* Class the members of each slideshow group with different CSS classes */
+    let slideId = ["mySlides1", "mySlides2"];
+    showSlides(1, 0);
+    showSlides(1, 1);
+
+    function plusSlides(n, no) {
+      showSlides((slideIndex[no] += n), no);
+    }
+
+    function showSlides(n, no) {
+      let i;
+      let x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {
+        slideIndex[no] = 1;
+      }
+      if (n < 1) {
+        slideIndex[no] = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex[no] - 1].style.display = "block";
+    }
+  </script>
 </html>

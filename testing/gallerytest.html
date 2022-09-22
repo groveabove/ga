@@ -195,6 +195,7 @@
     function showSlides(n, no) {
       let i;
       let x = document.getElementsByClassName(slideId[no]);
+      console.log(x)
       if (n > x.length) {
         slideIndex[no] = 1;
       }
@@ -205,6 +206,7 @@
         x[i].style.display = "none";
       }
       x[slideIndex[no] - 1].style.display = "block";
+      console.log(slideIndex)
     }
   </script>
 </html>

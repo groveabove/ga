@@ -62,23 +62,15 @@
               href="/gallery/fl-natives.html"
               alt="Seagrape Chandelier - The Florida Native Collection - Grove Above"
             >
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png">
-              <div class="text">Caption Text</div>
-            </div>
+              <div class="mySlides fade">
+                <img
+                  src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
+                />
+              </div>
 
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="/images/kp/KP_threequarter_800w.png">
-              <div class="text">Caption Two</div>
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png">
-              <div class="text">Caption Three</div>
-            </div>
+              <div class="mySlides fade">
+                <img src="/images/kp/KP_threequarter_800w.png" />
+              </div>
               <!-- <img
                 class="fit-left"
                 src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
@@ -106,22 +98,18 @@
               href="/gallery/rhizomes/kangaroo-paw-fern.html"
               alt="Kangaroo Paw Fern Chandelier - The Rhizome Collection - Grove Above"
             >
-            <div class="mySlides2 fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="/images/kp/KP_threequarter_800w.png">
-              <div class="text">Caption Text</div>
-            </div>
+              <div class="mySlides2 fade">
+                <img src="/images/kp/KP_threequarter_800w.png" />
+                <div class="text">Caption Text</div>
+              </div>
 
-            <div class="mySlides2 fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="/images/kp/KP_threequarter_800w.png">
-              <div class="text">Caption Two</div>
-            </div>
+              <div class="mySlides2 fade">
+                <img src="/images/kp/KP_threequarter_800w.png" />
+              </div>
 
-            <div class="mySlides2 fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="/images/kp/KP_threequarter_800w.png">
-              <div class="text">Caption Three</div>
+              <div class="mySlides2 fade">
+                <img src="/images/kp/KP_threequarter_800w.png" />
+              </div>
               <!-- <img
                 class="fit-right"
                 src="/images/kp/KP_threequarter_800w.png"
@@ -162,18 +150,20 @@
     </div>
   </body>
   <script>
-    let slideIndex = 0
+    let slideIndex = 0;
     showSlides();
 
     function showSlides() {
       let i;
       let slides = document.getElementsByClassName("mySlides");
       for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+        slides[i].style.display = "none";
       }
       slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex-1].style.display = "block";
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
   </script>

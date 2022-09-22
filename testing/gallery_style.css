@@ -332,13 +332,7 @@ html {
   }
 
 /* STUFF FROM https://www.w3schools.com/howto/howto_js_slideshow.asp */
-  * {box-sizing:border-box}
 
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  margin: auto;
-}
 
 /* Hide the images by default */
 .mySlides0, .mySlides1 {

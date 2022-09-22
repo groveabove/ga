@@ -46,6 +46,7 @@
       <main>
         <!-- *** LEFT *** -->
         <div class="gallery-left">
+          <!-- left header -->
           <a
             id="collection"
             href="/gallery/fl-natives.html"
@@ -55,37 +56,37 @@
               <h2>The Florida Native Collection</h2>
             </div>
           </a>
-
+          <!-- define slides as link-->
           <div class="box-left">
             <a
               id="collection"
               href="/gallery/fl-natives.html"
               alt="Seagrape Chandelier - The Florida Native Collection - Grove Above"
             >
-              <div class="mySlides0 fade">
+              <!-- start left slides -->
+              <!-- ONE-->
+              <div class="slidesLeft fade">
                 <img
                   class="fit-left"
                   src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
+                  alt="Seagrape Mini Dim Lit - Grove Above"
                 />
               </div>
-
-              <div class="mySlides0 fade">
+              <!-- TWO-->
+              <div class="slidesLeft fade">
                 <img
                   class="fit-left"
-                  src="/images/kp/KP_threequarter_800w.png"
+                  src="/images/sg/Seagrape_lit_800w.png"
+                  alt="Seagrape Lit - Grove Above"
                 />
               </div>
-              <!-- <img
-                class="fit-left"
-                src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
-                alt="Seagrape Mini Dim Lit - Grove Above"
-              /> -->
             </a>
           </div>
         </div>
 
         <!-- *** RIGHT *** -->
         <div class="gallery-right">
+          <!-- right header -->
           <a
             id="collection"
             href="/gallery/rhizomes/kangaroo-paw-fern.html"
@@ -96,30 +97,31 @@
             </div>
           </a>
 
+          <!-- define slides as link-->
           <div class="box-right">
             <a
               id="collection"
               href="/gallery/rhizomes/kangaroo-paw-fern.html"
               alt="Kangaroo Paw Fern Chandelier - The Rhizome Collection - Grove Above"
             >
-              <div class="mySlides1 fade">
+              <!-- start right slides -->
+              <!-- ONE-->
+              <div class="slidesRight fade">
                 <img
                   class="fit-right"
-                  src="/images/kp/KP_threequarter_800w.png"
+                  src="/images/kp/KP_front_800w.png"
+                  alt="Kangaroo Paw Chandelier Front Unlit - Grove Above"
                 />
               </div>
-
-              <div class="mySlides1 fade">
+              <!-- TWO-->
+              <div class="slidesRight fade">
                 <img
                   class="fit-right"
-                  src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
+                  src="/images/sg/Seagrape_lit_800w.png"
+                  alt="Seagrape Lit - Grove Above"
                 />
               </div>
-              <!-- <img
-                class="fit-right"
-                src="/images/kp/KP_threequarter_800w.png"
-                alt="Kangaroo Paw Three Quarter View - Grove Above"
-              /> -->
+              <!-- CURRENTLY INACTIVE BC ONLY ONE ITEM IN COLLECTION-->
             </a>
           </div>
         </div>
@@ -160,7 +162,7 @@
       /* left slideshow*/
       function showSlides1() {
         let i;
-        let slides = document.getElementsByClassName("mySlides0");
+        let slides = document.getElementsByClassName("slidesLeft");
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
@@ -175,7 +177,7 @@
       /*right slideshow*/
       function showSlides2() {
         let i;
-        let slides = document.getElementsByClassName("mySlides1");
+        let slides = document.getElementsByClassName("slidesRight");
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
@@ -187,7 +189,7 @@
         setTimeout(showSlides2, 2000); // Changes speed
       }
       showSlides1();
-      showSlides2();
+      setTimeout(showSlides2, 500);
     </script>
   </body>
 </html>

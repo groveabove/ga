@@ -190,7 +190,7 @@ html {
 Contained in two column gallery*/
 
 /* Hides the images in the stack as slideshow... slides?*/
-.mySlides0, .mySlides1 {
+.slidesLeft, .slidesRight {
   display: none;
 }
 

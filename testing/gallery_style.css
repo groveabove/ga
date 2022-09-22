@@ -3,7 +3,7 @@ html {
     width: 100%;
     overflow-x: hidden;
   }
-  
+
   body {
     height: 100%;
     margin: 0;
@@ -11,7 +11,7 @@ html {
     font-family: "Garamond", serif;
     color: #333366;
   }
-  
+
   /*contains entire layout to achieve vertical spacing*/
   .flex-container {
     display: flex;
@@ -19,7 +19,7 @@ html {
     justify-content: space-between; /*vertical*/
     min-height: 100%;
   }
-  
+
   /*contains logo and nav aligned left & right*/
   header {
     display: flex;
@@ -28,20 +28,20 @@ html {
     align-items: flex-start; /*vertical*/
     margin: 0.5rem 0 0 0;
   }
-  
+
   .logo {
     /* height: 4.26rem; */ /*size that matches nav*/
     height: 5rem;
   }
-  
+
   a {
     color:#333366;
   }
-  
+
   a:visited {
     color: #333366;
   }
-  
+
   /*contains flex nav*/
   nav ul {
     display: flex;
@@ -52,7 +52,7 @@ html {
     margin: 0 -0.5rem 0 0; /*counteracts header margin*/
     padding: 0;
   }
-  
+
   /*nav side tabs partially hidden offscreen*/
   nav ul li a {
     color: #333366;
@@ -64,17 +64,17 @@ html {
     width: 45px;
     transform: none;
   }
-  
+
   /*nav side tabs display on hover*/
   nav ul li a:hover {
     width: 100px;
     transition: all 0.3s ease;
   }
-  
+
   a#active {
     width: 100px;
   }
-  
+
   /*Centered main container for all pages*/
   main {
     display: flex;
@@ -86,7 +86,7 @@ html {
     width: 70%;
     align-self: center;
   }
-  
+
   /*OPTION: Single centered large main body box*/
   .single-box {
     background-color: rgba(255, 255, 255, 0.25);
@@ -95,7 +95,7 @@ html {
     flex-basis: 100%; /*horizontal width*/
     text-align: justify;
   }
-  
+
   /*OPTION: Give single body box a decorative top & bottom*/
   .decoration-container {
     display: flex;
@@ -104,16 +104,16 @@ html {
     justify-content: center;
     flex-basis: 100%; /*horizontal width*/
   }
-  
+
   img.decoration {
     width: 9rem;
   }
-  
+
   img.decoration#flip {
     transform: rotate(180deg);
     width: 12rem;
   }
-  
+
   /*contains four elements of contact information*/
   .contact-container {
     padding: 1rem 0 1rem 0;
@@ -122,7 +122,7 @@ html {
     gap: 1rem;
     width: 120%; /*exceed the main's width*/
   }
-  
+
   .contact {
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 0 1.5rem 0 1.5rem;
@@ -132,16 +132,16 @@ html {
     flex-basis: 25%;
     flex: 1;
   }
-  
+
   .contact a {
     color: #333366;
     text-decoration: none;
   }
-  
+
   .contact a:hover {
     filter: drop-shadow(0 0 0.03rem #ffcc00);
   }
-  
+
   /*OPTION: Two column image gallery*/
   /*each use of class is one column*/
   .gallery-left,
@@ -152,7 +152,7 @@ html {
     gap: 1rem;
     flex-basis: 40%; /*defines each column width within gallery relative to main's width*/
   }
-  
+
   /*left boxes*/
   .box-left {
     background-color: rgba(255, 255, 255, 0.25);
@@ -161,17 +161,17 @@ html {
     max-width: 100%;
     text-align: justify;
   }
-  
+
   img.fit-left {
     width: 100%;
     border-radius: 0 0 0 1.5rem;
   }
-  
+
   /*Description will show top right of image, hiding under image option. When on below, it shows under first image in column*/
   #description-hide-left {
     display: none;
   }
-  
+
   /*right boxes*/
   .box-right {
     background-color: rgba(255, 255, 255, 0.25);
@@ -180,28 +180,28 @@ html {
     max-width: 100%;
     text-align: justify;
   }
-  
+
   img.fit-right {
     width: 100%;
     border-radius: 0 1.5rem 0 0;
   }
-  
+
   /*text modifiers*/
   p.center {
     text-align: center;
   }
-  
+
   p:first-of-type::first-letter {
     font-size: 133%;
   }
-  
+
   h1 {
     /* header on info card of each portfolio piece */
     font-size: 1.2rem;
     font-style: italic;
     font-weight: 600;
   }
-  
+
   h2 {
     /* header on explore gallery page */
     font-size: 1.5rem;
@@ -209,31 +209,31 @@ html {
     font-weight: 600;
     text-align: center;
   }
-  
+
   a#collection {
     text-decoration: none;
     color: #333366;
   }
-  
+
   a#collection:hover {
     filter: drop-shadow(0 0 0.01rem #333366);
   }
-  
+
   p.details {
     margin: 1em;
   }
-  
+
   /*removes default paragraph styling*/
   p.details:first-of-type::first-letter {
     font-size: 100%;
   }
-  
+
   /*resize @*/
   at {
     display: inline;
     font-size: 0.8rem;
   }
-  
+
   /*contains social media aligned right*/
   footer {
     display: flex;
@@ -242,7 +242,7 @@ html {
     align-items: flex-end; /*vertical*/
     margin: 0.5rem;
   }
-  
+
   ul.footer-nav {
     list-style-type: none;
     margin: 0;
@@ -251,25 +251,25 @@ html {
     flex-direction: row;
     gap: 0.5rem;
   }
-  
+
   .footer-nav a {
     color: #333366;
     text-decoration: none;
   }
-  
+
   .footer-nav a:hover {
     filter: drop-shadow(0 0 0.03rem #333366);
   }
-  
+
   .instagram {
     width: 1.875rem;
     height: 1.875rem; /*gets rid of weird margin when applied to a, resizes img*/
   }
-  
+
   .instagram:hover {
     filter: hue-rotate(88deg) saturate(186%) brightness(186%);
   }
-  
+
   /*eliminates hover on touchscreens, displays nav as screen gets smaller*/
   @media screen and (max-width: 1200px), (any-hover: none) {
     nav ul li a {
@@ -297,7 +297,7 @@ html {
       transition: all 1s ease;
     }
   }
-  
+
   /*switches to all column display on small screen, resizes main body boxes larger*/
   @media screen and (max-width: 800px) {
     main {
@@ -330,4 +330,92 @@ html {
       flex-wrap: wrap;
     }
   }
-  
+
+/* STUFF FROM https://www.w3schools.com/howto/howto_js_slideshow.asp */
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

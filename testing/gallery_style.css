@@ -186,6 +186,26 @@ html {
     border-radius: 0 1.5rem 0 0;
   }
 
+/* AUTOMATIC SLIDESHOW FROM https://www.w3schools.com/howto/howto_js_slideshow.asp 
+Contained in two column gallery*/
+
+/* Hides the images in the stack as slideshow... slides?*/
+.mySlides0, .mySlides1 {
+  display: none;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
   /*text modifiers*/
   p.center {
     text-align: center;
@@ -330,27 +350,3 @@ html {
       flex-wrap: wrap;
     }
   }
-
-/* STUFF FROM https://www.w3schools.com/howto/howto_js_slideshow.asp */
-
-
-/* Hide the images by default */
-.mySlides0, .mySlides1 {
-  display: none;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}

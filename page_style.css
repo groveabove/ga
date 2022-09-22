@@ -133,13 +133,19 @@ img.decoration#flip {
   flex: 1;
 }
 
-.contact a {
-  color: #333366;
-  text-decoration: none;
-}
-
+/* OLD --
 .contact a:hover {
   filter: drop-shadow(0 0 0.03rem #ffcc00);
+}
+*/
+
+/*formats link containing div*/
+a#contact {
+  flex-basis: 25%;
+}
+
+a#contact:hover {
+  filter: drop-shadow(0 0 0.01rem #333366);
 }
 
 /*OPTION: Two column image gallery*/
@@ -210,6 +216,7 @@ h2 {
   text-align: center;
 }
 
+/*formats header which is defined as a link containing a div*/
 a#collection {
   text-decoration: none;
   color: #333366;
@@ -217,6 +224,17 @@ a#collection {
 
 a#collection:hover {
   filter: drop-shadow(0 0 0.01rem #333366);
+}
+
+
+/*format pseduo-breadcrumb for gallery posts*/
+a#breadcrumb {
+  text-decoration: none;
+  color: #333366;
+}
+
+a#breadcrumb:hover {
+  text-decoration: underline;
 }
 
 p.details {

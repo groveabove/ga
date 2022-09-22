@@ -152,7 +152,7 @@
       let slideIndexRight = 0;
 
       /* left slideshow*/
-      function showSlides1() {
+      function showSlidesLeft() {
         let i;
         let slides = document.getElementsByClassName("slidesLeft");
         for (i = 0; i < slides.length; i++) {
@@ -163,11 +163,11 @@
           slideIndexLeft = 1;
         }
         slides[slideIndexLeft - 1].style.display = "block";
-        setTimeout(showSlides1, 3000); // Change speed
+        setTimeout(showSlidesLeft, 5000); // Change speed
       }
 
       /*right slideshow*/
-      function showSlides2() {
+      function showSlidesRight() {
         let i;
         let slides = document.getElementsByClassName("slidesRight");
         for (i = 0; i < slides.length; i++) {
@@ -178,10 +178,11 @@
           slideIndexRight = 1;
         }
         slides[slideIndexRight - 1].style.display = "block";
-        setTimeout(showSlides2, 3000); // Changes speed
+        setTimeout(showSlidesRight, 5000); // Changes speed
       }
-      showSlides1();
-      setTimeout(showSlides2, 1000); //delays second slideshow
+      showSlidesLeft();
+      document.getElementsByClassName("slidesRight")[0].style.display = "block";
+      setTimeout(showSlidesRight, 1000); //delays right slideshow
     </script>
   </body>
 </html>

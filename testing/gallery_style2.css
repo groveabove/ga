@@ -193,7 +193,7 @@ html {
     overflow: hidden;
   }
 
-  slide{
+  .slide{
     position: absolute;
   }
 

@@ -192,13 +192,17 @@ html {
     display: grid;
     place-items: center;
     position: relative;
+    overflow: hidden;
+  }
+
+  slide{
+    position: absolute;
   }
 
   .next, .previous{
     position: absolute;
     width, height: 50px;
     padding: 10px;  
-    overflow: hidden;
   }
 
   .next{

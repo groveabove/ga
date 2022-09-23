@@ -190,7 +190,6 @@ html {
 /* slider attempt*/
 
   .next, .previous{
-    position: absolute;
     width, height: 50px;
     padding: 10px;  
   }

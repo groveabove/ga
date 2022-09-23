@@ -198,16 +198,17 @@ html {
     position: absolute;
     width, height: 50px;
     padding: 10px;  
+    overflow: hidden;
   }
 
   .next{
     top: 50%;
-    left: 2%;
+    right: 2%;
   }
 
   .previous{
     top: 50%;
-    right: 2%;
+    left: 2%;
   }
 
 

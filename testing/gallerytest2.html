@@ -143,42 +143,5 @@
         </a>
       </footer>
     </div>
-    <script>
-      let slideIndexLeft = 1;
-      let slideIndexRight = 1;
-
-      /* left slideshow*/
-      function showSlidesLeft() {
-        let i;
-        let slides = document.getElementsByClassName("slidesLeft");
-        for (i = 0; i < slides.length; i + 1) {
-          slides[i].style.display = "none";
-        }
-        slideIndexLeft++;
-        if (slideIndexLeft > slides.length) {
-          slideIndexLeft = 1;
-        }
-        slides[slideIndexLeft - 1].style.display = "block";
-        setTimeout(showSlidesLeft, 3500); // Change speed
-      }
-
-      /*right slideshow*/
-      function showSlidesRight() {
-        let i;
-        let slides = document.getElementsByClassName("slidesRight");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndexRight++;
-        if (slideIndexRight > slides.length) {
-          slideIndexRight = 1;
-        }
-        slides[slideIndexRight - 1].style.display = "block";
-        setTimeout(showSlidesRight, 3500); // Changes speed
-      }
-      showSlidesLeft();
-      document.getElementsByClassName("slidesRight")[0].style.display = "block";
-      setTimeout(showSlidesRight, 1000); //delays right slideshow
-    </script>
   </body>
 </html>

@@ -186,6 +186,8 @@ html {
     border-radius: 0 1.5rem 0 0;
   }
 
+/* slider attempt*/
+
   .slider{
     display: grid;
     place-items: center;
@@ -208,24 +210,6 @@ html {
     right: 2%;
   }
 
-/* AUTOMATIC SLIDESHOW FROM https://www.w3schools.com/howto/howto_js_slideshow.asp 
-Contained in two column gallery*/
-
-/* Hides the images in the stack as slideshow... slides?*/
-.slidesLeft, .slidesRight {
-  display: none;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 3s;
-}
-
-@keyframes fade {
-  from {opacity: .3}
-  to {opacity: 1}
-}
 
   /*text modifiers*/
   p.center {

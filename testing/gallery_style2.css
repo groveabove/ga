@@ -189,8 +189,6 @@ html {
 /* slider attempt*/
 
   .slider{
-    display: grid;
-    place-items: center;
     position: relative;
     overflow: hidden;
   }

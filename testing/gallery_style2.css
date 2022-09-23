@@ -189,8 +189,7 @@ html {
 /* slider attempt*/
 
   .slider{
-    position: relative;
-    overflow: hidden;
+   overflow: hidden;
   }
 
   .slide{

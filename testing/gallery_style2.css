@@ -186,6 +186,28 @@ html {
     border-radius: 0 1.5rem 0 0;
   }
 
+  .slider{
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .next, .previous{
+    position: absolute;
+    width, height: 50px;
+    padding: 10px;  
+  }
+
+  .next{
+    top: 50%;
+    left: 2%;
+  }
+
+  .previous{
+    top: 50%;
+    right: 2%;
+  }
+
 /* AUTOMATIC SLIDESHOW FROM https://www.w3schools.com/howto/howto_js_slideshow.asp 
 Contained in two column gallery*/
 
@@ -204,32 +226,6 @@ Contained in two column gallery*/
   from {opacity: .3}
   to {opacity: 1}
 }
-
-/*Style and position arrows for slideshow*/
-
-.overlay{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-}
-.previous{
-    display:inline-flex;
-    align-self: flex-start;
-  }
-
-.next {
-    display:inline-flex;
-    align-self: flex-end;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .previous:hover,
-  .next:hover {
-    filter: drop-shadow(0 0 .1rem #ffcc00);
-  }
-
 
   /*text modifiers*/
   p.center {

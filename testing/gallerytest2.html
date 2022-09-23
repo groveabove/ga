@@ -57,30 +57,26 @@
             </div>
           </a>
 
-          <!-- define slides as link-->
-          <div class="box-left">
-              <!-- start left slides -->
-              <!-- ONE-->
-              <div class="slidesLeft fade">
-                <div class="overlay">
-                <a class="previous" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                </div>
-                <img
-                  class="fit-left"
-                  src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
-                  alt="Seagrape Mini Dim Lit - Grove Above"
-                />
-              </div>
-              <!-- TWO-->
-              <div class="slidesLeft fade">
-                <img
-                  class="fit-left"
-                  src="/images/sg/Seagrape_lit_800w.png"
-                  alt="Seagrape Lit - Grove Above"
-                />
-              </div>
-            </a>
+          <div class="box-left slider">
+            <!-- start left slides -->
+            <!-- ONE-->
+            <div class="slidesLeft fade">
+              <img
+                class="fit-left"
+                src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
+                alt="Seagrape Mini Dim Lit - Grove Above"
+              />
+            </div>
+            <!-- TWO-->
+            <div class="slidesLeft fade">
+              <img
+                class="fit-left"
+                src="/images/sg/Seagrape_lit_800w.png"
+                alt="Seagrape Lit - Grove Above"
+              />
+            </div>
+            <button class="next">></button>
+            <button class="previous"><</button>
           </div>
         </div>
 
@@ -148,14 +144,14 @@
       </footer>
     </div>
     <script>
-      let slideIndexLeft = 0;
-      let slideIndexRight = 0;
+      let slideIndexLeft = 1;
+      let slideIndexRight = 1;
 
       /* left slideshow*/
       function showSlidesLeft() {
         let i;
         let slides = document.getElementsByClassName("slidesLeft");
-        for (i = 0; i < slides.length; i++) {
+        for (i = 0; i < slides.length; i + 1) {
           slides[i].style.display = "none";
         }
         slideIndexLeft++;

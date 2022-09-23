@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore the lighting collections crafted by ceramic artist Haley B. Schweizer for Grove Above."
+    />
+    <meta name="author" content="Haley B. Schweizer" />
+    <link href="/testing/gallery_style2.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Grove Above - Gallery TESTING PAGE</title>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <header>
+        <div class="logo">
+          <a href="/index.html" alt="Home - Grove Above"
+            ><img
+              class="logo"
+              src="/site-images/ga_logo.png"
+              alt="Logo - Grove Above"
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/about.html" alt="About - Grove Above">about</a></li>
+            <li>
+              <a href="/contact.html" alt="Contact - Grove Above">contact</a>
+            </li>
+            <li>
+              <a
+                id="active"
+                href="/gallery.html"
+                alt="Explore the Gallery - Grove Above"
+                >explore</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- *** LEFT *** -->
+        <div class="gallery-left">
+          <!-- left header -->
+          <a
+            id="collection"
+            href="/gallery/fl-natives.html"
+            alt="Seagrape Chandelier - The Florida Native Collection - Grove Above"
+          >
+            <div class="box-left">
+              <h2>The Florida Native Collection</h2>
+            </div>
+          </a>
+          <!-- define slides as link-->
+          <div class="box-left">
+            <a
+              id="collection"
+              href="/gallery/fl-natives.html"
+              alt="Seagrape Chandelier - The Florida Native Collection - Grove Above"
+            >
+              <!-- start left slides -->
+              <!-- ONE-->
+              <div class="slidesLeft fade">
+                <img
+                  class="fit-left"
+                  src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
+                  alt="Seagrape Mini Dim Lit - Grove Above"
+                />
+              </div>
+              <!-- TWO-->
+              <div class="slidesLeft fade">
+                <img
+                  class="fit-left"
+                  src="/images/sg/Seagrape_lit_800w.png"
+                  alt="Seagrape Lit - Grove Above"
+                />
+              </div>
+            </a>
+            <a class="previous" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
+
+        <!-- *** RIGHT *** -->
+        <div class="gallery-right">
+          <!-- right header -->
+          <a
+            id="collection"
+            href="/gallery/rhizomes/kangaroo-paw-fern.html"
+            alt="Kangaroo Paw Fern Chandelier - The Rhizome Collection - Grove Above"
+          >
+            <div class="box-right">
+              <h2>The Rhizome Collection</h2>
+            </div>
+          </a>
+
+          <!-- define slides as link-->
+          <div class="box-right">
+            <a
+              id="collection"
+              href="/gallery/rhizomes/kangaroo-paw-fern.html"
+              alt="Kangaroo Paw Fern Chandelier - The Rhizome Collection - Grove Above"
+            >
+              <!-- start right slides -->
+              <!-- ONE-->
+              <div class="slidesRight fade">
+                <img
+                  class="fit-right"
+                  src="/images/kp/KP_front_800w.png"
+                  alt="Kangaroo Paw Chandelier Front Unlit - Grove Above"
+                />
+              </div>
+              <!-- CURRENTLY INACTIVE BC ONLY ONE ITEM IN COLLECTION-->
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <ul class="footer-nav">
+          <li class="footer-nav">
+            <a href="/index.html" alt="Home - Grove Above">home</a>
+          </li>
+          <li class="footer-nav">
+            <a href="/about.html" alt="About - Grove Above">about</a>
+          </li>
+          <li class="footer-nav">
+            <a href="/contact.html" alt="Contact - Grove Above">contact</a>
+          </li>
+          <li class="footer-nav">
+            <a href="/gallery.html" alt="Explore the Gallery - Grove Above"
+              >explore</a
+            >
+          </li>
+          <li>© 2022 Haley B. Schweizer</li>
+        </ul>
+
+        <a class="instagram" href="https://www.instagram.com/groveabove/">
+          <img
+            class="instagram"
+            src="/site-images/insta.png"
+            alt="instagram @groveabove fine porcelain lighting"
+          />
+        </a>
+      </footer>
+    </div>
+    <script>
+      let slideIndexLeft = 0;
+      let slideIndexRight = 0;
+
+      /* left slideshow*/
+      function showSlidesLeft() {
+        let i;
+        let slides = document.getElementsByClassName("slidesLeft");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndexLeft++;
+        if (slideIndexLeft > slides.length) {
+          slideIndexLeft = 1;
+        }
+        slides[slideIndexLeft - 1].style.display = "block";
+        setTimeout(showSlidesLeft, 3500); // Change speed
+      }
+
+      /*right slideshow*/
+      function showSlidesRight() {
+        let i;
+        let slides = document.getElementsByClassName("slidesRight");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndexRight++;
+        if (slideIndexRight > slides.length) {
+          slideIndexRight = 1;
+        }
+        slides[slideIndexRight - 1].style.display = "block";
+        setTimeout(showSlidesRight, 3500); // Changes speed
+      }
+      showSlidesLeft();
+      document.getElementsByClassName("slidesRight")[0].style.display = "block";
+      setTimeout(showSlidesRight, 1000); //delays right slideshow
+    </script>
+  </body>
+</html>

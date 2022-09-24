@@ -57,23 +57,25 @@
             </div>
           </a>
 
-          <div class="box-left slider">
+          <div class="box-left" id="slider-container-outer">
             <!-- start left slides -->
             <!-- ONE-->
-            <img
-              class="fit-left slide"
-              src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
-              alt="Seagrape Mini Dim Lit - Grove Above"
-            />
-            <!-- TWO-->
-            <img
-              class="fit-left slide"
-              src="/images/sg/Seagrape_lit_800w.png"
-              alt="Seagrape Lit - Grove Above"
-            />
-
-            <button class="previous"><</button>
-            <button class="next">></button>
+            <div id="slider-container">
+              <img
+                class="fit-left slider-item"
+                data-position="1"
+                src="https://groveabove.com/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
+                alt="Seagrape Mini Dim Lit - Grove Above"
+              />
+              <!-- TWO-->
+              <img
+                class="fit-left slider-item"
+                data-position="2"
+                src="https://groveabove.com/images/sg/Seagrape_lit_800w.png"
+                alt="Seagrape Lit - Grove Above"
+              />
+            </div>
+            <button id="move-button">&#8250;</button>
           </div>
         </div>
 
@@ -101,7 +103,7 @@
               <div class="x">
                 <img
                   class="fit-right"
-                  src="/images/kp/KP_front_800w.png"
+                  src="https://groveabove.com/images/kp/KP_front_800w.png"
                   alt="Kangaroo Paw Chandelier Front Unlit - Grove Above"
                 />
               </div>
@@ -139,57 +141,87 @@
         </a>
       </footer>
     </div>
-
     <script>
-      "use strict";
-      // Select all slides
-      const slides = document.querySelectorAll(".slide");
+      const FlexSlider = {
+        // total no of items
+        num_items: document.querySelectorAll(".slider-item").length,
 
-      // loop through slides and set each slides translateX
-      slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${indx * 100}%)`;
-      });
+        // position of current item in view
+        current: 1,
 
-      // select next slide button
-      const nextSlide = document.querySelector(".next");
+        init: function () {
+          // set CSS order of each item initially
+          document
+            .querySelectorAll(".slider-item")
+            .forEach(function (element, index) {
+              element.style.order = index + 1;
+            });
 
-      // current slide counter
-      let curSlide = 0;
-      // maximum number of slides
-      let maxSlide = slides.length - 1;
+          this.addEvents();
+        },
 
-      // add event listener and navigation functionality
-      nextSlide.addEventListener("click", function () {
-        // check if current slide is the last and reset current slide
-        if (curSlide === maxSlide) {
-          curSlide = 0;
-        } else {
-          curSlide++;
-        }
+        addEvents: function () {
+          var that = this;
 
-        //   move slide by -100%
-        slides.forEach((slide, indx) => {
-          slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
-      });
+          // click on move item button
+          document
+            .querySelector("#move-button")
+            .addEventListener("click", () => {
+              this.gotoNext();
+            });
 
-      // select next slide button
-      const prevSlide = document.querySelector(".previous");
+          // after each item slides in, slider container fires transitionend event
+          document
+            .querySelector("#slider-container")
+            .addEventListener("transitionend", () => {
+              this.changeOrder();
+            });
+        },
 
-      // add event listener and navigation functionality
-      prevSlide.addEventListener("click", function () {
-        // check if current slide is the first and reset current slide to last
-        if (curSlide === 0) {
-          curSlide = maxSlide;
-        } else {
-          curSlide--;
-        }
+        changeOrder: function () {
+          // change current position
+          if (this.current == this.num_items) this.current = 1;
+          else this.current++;
 
-        //   move slide by 100%
-        slides.forEach((slide, indx) => {
-          slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
-      });
+          let order = 1;
+
+          // change order from current position till last
+          for (let i = this.current; i <= this.num_items; i++) {
+            document.querySelector(
+              ".slider-item[data-position='" + i + "']"
+            ).style.order = order;
+            order++;
+          }
+
+          // change order from first position till current
+          for (let i = 1; i < this.current; i++) {
+            document.querySelector(
+              ".slider-item[data-position='" + i + "']"
+            ).style.order = order;
+            order++;
+          }
+
+          // translate back to 0 from -100%
+          // we don't need transitionend to fire for this translation, so remove transition CSS
+          document
+            .querySelector("#slider-container")
+            .classList.remove("slider-container-transition");
+          document.querySelector("#slider-container").style.transform =
+            "translateX(0)";
+        },
+
+        gotoNext: function () {
+          // translate from 0 to -100%
+          // we need transitionend to fire for this translation, so add transition CSS
+          document
+            .querySelector("#slider-container")
+            .classList.add("slider-container-transition");
+          document.querySelector("#slider-container").style.transform =
+            "translateX(-100%)";
+        },
+      };
+
+      FlexSlider.init();
     </script>
   </body>
 </html>

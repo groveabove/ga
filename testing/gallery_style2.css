@@ -194,10 +194,13 @@ img.fit-right {
   left: 20px;
   border-radius: .8rem;
   border: none;
-  width: 25px;
   font-size: 133%;
   opacity: 50%;
   z-index: 10;
+}
+
+#move-button:hover {
+  opacity: 75%;
 }
 
 #slider-container-outer {
@@ -219,7 +222,7 @@ img.fit-right {
 .slider-item {
 	width: 100%;
 	flex-shrink: 0;
-  margin-right: 1.5rem;
+  margin-right: 1.5rem; /*adjusts for container padding*/
 }
 
 /*text modifiers*/

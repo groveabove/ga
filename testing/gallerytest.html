@@ -9,9 +9,9 @@
       content="Explore the lighting collections crafted by ceramic artist Haley B. Schweizer for Grove Above."
     />
     <meta name="author" content="Haley B. Schweizer" />
-    <link href="/testing/gallery_style.css" rel="stylesheet" />
+    <link href="/page_style.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <title>Grove Above - Gallery TESTING PAGE</title>
+    <title>Grove Above - Gallery TESTING</title>
   </head>
 
   <body>
@@ -46,7 +46,6 @@
       <main>
         <!-- *** LEFT *** -->
         <div class="gallery-left">
-          <!-- left header -->
           <a
             id="collection"
             href="/gallery/fl-natives.html"
@@ -56,37 +55,25 @@
               <h2>The Florida Native Collection</h2>
             </div>
           </a>
-          <!-- define slides as link-->
+
           <div class="box-left">
             <a
               id="collection"
               href="/gallery/fl-natives.html"
               alt="Seagrape Chandelier - The Florida Native Collection - Grove Above"
             >
-              <!-- start left slides -->
-              <!-- ONE-->
-              <div class="slidesLeft fade">
-                <img
-                  class="fit-left"
-                  src="/images/sg/mini/seagrape-mini-dim-lit-front-800w.png"
-                  alt="Seagrape Mini Dim Lit - Grove Above"
-                />
-              </div>
-              <!-- TWO-->
-              <div class="slidesLeft fade">
-                <img
-                  class="fit-left"
-                  src="/images/sg/Seagrape_lit_800w.png"
-                  alt="Seagrape Lit - Grove Above"
-                />
-              </div>
+              <img
+                class="fit-left"
+                src="/images/sg/mini/seagrape-mini-hero.png"
+                alt="Seagrape Mini - Grove Above"
+              />
+              <!-- replace img file to change above-->
             </a>
           </div>
         </div>
 
         <!-- *** RIGHT *** -->
         <div class="gallery-right">
-          <!-- right header -->
           <a
             id="collection"
             href="/gallery/rhizomes/kangaroo-paw-fern.html"
@@ -97,23 +84,17 @@
             </div>
           </a>
 
-          <!-- define slides as link-->
           <div class="box-right">
             <a
               id="collection"
               href="/gallery/rhizomes/kangaroo-paw-fern.html"
               alt="Kangaroo Paw Fern Chandelier - The Rhizome Collection - Grove Above"
             >
-              <!-- start right slides -->
-              <!-- ONE-->
-              <div class="slidesRight fade">
-                <img
-                  class="fit-right"
-                  src="/images/kp/KP_front_800w.png"
-                  alt="Kangaroo Paw Chandelier Front Unlit - Grove Above"
-                />
-              </div>
-              <!-- CURRENTLY INACTIVE BC ONLY ONE ITEM IN COLLECTION-->
+              <img
+                class="fit-right"
+                src="/images/kp/KP_threequarter_800w.png"
+                alt="Kangaroo Paw Three Quarter View - Grove Above"
+              />
             </a>
           </div>
         </div>
@@ -147,42 +128,5 @@
         </a>
       </footer>
     </div>
-    <script>
-      let slideIndexLeft = 0;
-      let slideIndexRight = 0;
-
-      /* left slideshow*/
-      function showSlidesLeft() {
-        let i;
-        let slides = document.getElementsByClassName("slidesLeft");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndexLeft++;
-        if (slideIndexLeft > slides.length) {
-          slideIndexLeft = 1;
-        }
-        slides[slideIndexLeft - 1].style.display = "block";
-        setTimeout(showSlidesLeft, 3500); // Change speed
-      }
-
-      /*right slideshow*/
-      function showSlidesRight() {
-        let i;
-        let slides = document.getElementsByClassName("slidesRight");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndexRight++;
-        if (slideIndexRight > slides.length) {
-          slideIndexRight = 1;
-        }
-        slides[slideIndexRight - 1].style.display = "block";
-        setTimeout(showSlidesRight, 3500); // Changes speed
-      }
-      showSlidesLeft();
-      document.getElementsByClassName("slidesRight")[0].style.display = "block";
-      setTimeout(showSlidesRight, 1000); //delays right slideshow
-    </script>
   </body>
 </html>

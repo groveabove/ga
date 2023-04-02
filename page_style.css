@@ -79,9 +79,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-a#active {
-}
-
 /*Centered main container for all pages*/
 main {
   display: flex;

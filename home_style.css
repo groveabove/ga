@@ -33,47 +33,63 @@ body {
   height: 100%;
 }
 
-/*contains logo and nav aligned left & right*/
+/*contains logo and nav*/
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /*horizontal*/
-  align-content: center; /*vertical*/
-  margin: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around; /*horizontal*/
+  align-items: center; /*vertical*/
+  margin: 1rem 0 0 0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .logo {
-  height: 4.26rem;
-  visibility: hidden; /*do not display logo on homepage*/
+visibility: hidden;
 }
 
-/*contains flex nav*/
-nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /*keeps nav aligned right*/
-  gap: 0.3rem;
-  list-style-type: none;
-  margin: 0 -0.5rem 0 0; /*counteracts header margin*/
-  padding: 0;
+a {
+  color:#333366;
 }
 
-/*nav side tabs partially hidden offscreen*/
-nav ul li a {
+a:visited {
   color: #333366;
-  text-decoration: none;
-  display: block;
-  background-color: #ffcc00;
-  padding: 1px 20px 1px 20px;
-  border-radius: 0.5rem 0 0 0;
-  width: 45px;
-  transform: none;
 }
 
-/*nav side tabs display on hover*/
+nav {
+  width: 100%;
+}
+
+nav ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center; /*vertical*/
+  justify-content: center; /*horizontal*/
+  color: #333366;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  padding: 0 2rem 0 1rem;
+  text-align: center;
+}
+
+/*spaces nav bar horizontally*/
+#navitemsm {
+  width: 20%;
+}
+
+#navitemlg {
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333366;
+}
+
 nav ul li a:hover {
-  width: 100px;
-  transition: all 0.3s ease;
+  text-decoration: underline;
 }
 
 /*controls majority of page*/
@@ -148,6 +164,13 @@ footer {
     width: 60%;
     transition: all 0.5s ease;
   }
+}
+
+@media screen and (max-width: 850px) {
+footer {
+  margin: 0px;
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, .25);
 }
 
 @media screen and (max-width: 500px) {

@@ -20,18 +20,19 @@ body {
   min-height: 100%;
 }
 
-/*contains logo and nav aligned left & right*/
+/*contains logo and nav*/
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /*horizontal*/
-  align-items: flex-start; /*vertical*/
-  margin: 0.5rem 0 0 0;
+  flex-wrap: wrap;
+  justify-content: space-around; /*horizontal*/
+  align-items: center; /*vertical*/
+  margin: 1rem 0 4rem 0;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .logo {
-  /* height: 4.26rem; */ /*size that matches nav*/
-  height: 5rem;
+height: 5.5rem;
 }
 
 a {
@@ -42,37 +43,43 @@ a:visited {
   color: #333366;
 }
 
-/*contains flex nav*/
-nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /*keeps nav aligned right*/
-  gap: 0.3rem;
+nav {
+  width: 100%;
+}
+
+nav ul{
   list-style-type: none;
-  margin: 0 -0.5rem 0 0; /*counteracts header margin*/
-  padding: 0;
-}
-
-/*nav side tabs partially hidden offscreen*/
-nav ul li a {
+  display: flex;
+  align-items: center; /*vertical*/
+  justify-content: center; /*horizontal*/
   color: #333366;
-  text-decoration: none;
-  display: block;
-  background-color: #ffcc00;
-  padding: 1px 20px 1px 20px;
-  border-radius: 0.5rem 0 0 0;
-  width: 45px;
-  transform: none;
+  text-transform: uppercase;
 }
 
-/*nav side tabs display on hover*/
+nav ul li {
+  padding: 0 2rem 0 1rem;
+  text-align: center;
+}
+
+/*spaces nav bar horizontally*/
+#navitemsm {
+  width: 20%;
+}
+
+#navitemlg {
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333366;
+}
+
 nav ul li a:hover {
-  width: 100px;
-  transition: all 0.3s ease;
+  text-decoration: underline;
 }
 
 a#active {
-  width: 100px;
 }
 
 /*Centered main container for all pages*/
@@ -318,6 +325,23 @@ ul.footer-nav {
 
 /*switches to all column display on small screen, resizes main body boxes larger*/
 @media screen and (max-width: 800px) {
+  header{
+    margin-bottom: .1rem;
+    margin-top: .5rem;
+  }
+  nav ul{
+    flex-direction: column;
+    align-items: center;
+
+  }
+  nav ul li {
+    margin-bottom: .2rem;
+  } 
+
+  ul li:nth-child(3) {
+    order: -1;  /*move logo to top*/
+    margin-bottom: .5rem;
+  } 
   main {
     flex-direction: column;
     align-items: center; /*horizontal*/

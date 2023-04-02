@@ -326,7 +326,7 @@ ul.footer-nav {
 /*switches to all column display on small screen, resizes main body boxes larger*/
 @media screen and (max-width: 800px) {
   header{
-    margin-bottom: .1rem;
+    /* margin-bottom: .1rem; */
     margin-top: .5rem;
   }
   nav ul{

@@ -79,9 +79,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-a#active {
-}
-
 /*Centered main container for all pages*/
 main {
   display: flex;
@@ -94,15 +91,6 @@ main {
   align-self: center;
 }
 
-/*OPTION: Single centered large main body box*/
-.single-box {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 0 1.5rem 0 1.5rem;
-  padding: 1rem;
-  flex-basis: 100%; /*horizontal width*/
-  text-align: justify;
-}
-
 /*OPTION: Give single body box a decorative top & bottom*/
 .decoration-container {
   display: flex;
@@ -110,6 +98,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-basis: 100%; /*horizontal width*/
+  gap: 1rem;
 }
 
 img.decoration {
@@ -121,13 +110,22 @@ img.decoration#flip {
   width: 12rem;
 }
 
+/*OPTION: Single centered large main body box*/
+.single-box {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 1.5rem 0 1.5rem;
+  padding: 3rem;
+  width: 60%; /*horizontal width*/
+  text-align: justify;
+}
+
 /*contains four elements of contact information*/
 .contact-container {
   padding: 1rem 0 1rem 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1rem;
-  width: 120%; /*exceed the main's width*/
+  width: 50%; /*relative to the main's width*/
 }
 
 .contact {
@@ -350,7 +348,7 @@ ul.footer-nav {
     column-gap: 1rem;
   }
   img.scale-off {
-    display: none; /*hide decoration on about page*/
+    display: none; /*hide decoration on about & contact pages*/
   }
   .single-box {
     width: 100%; /*horizontal width*/

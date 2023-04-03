@@ -227,7 +227,8 @@ a#collection {
 }
 
 a#collection:hover {
-  filter: drop-shadow(0 0 0.01rem #333366);
+  /* filter: drop-shadow(0 0 0.01rem #333366); */
+  text-decoration: underline;
 }
 
 
